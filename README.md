@@ -1,1 +1,1 @@
-## Polyplace | An Nft Marketplace
+## Polyplace
