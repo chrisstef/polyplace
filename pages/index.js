@@ -1,7 +1,7 @@
 const Home = () => (
   <div>
     <h1 className="text-3xl font-bold underline">
-      Hello Party Ppl🙌
+      Hello party ppl🙌
     </h1>
   </div>
 );
