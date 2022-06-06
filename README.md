@@ -1,1 +1,1 @@
-## Polyplace | NFT Marketplace fullstack app.
+## Polyplace | NFT Marketplace Fullstack App
