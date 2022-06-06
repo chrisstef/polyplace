@@ -79,7 +79,7 @@ const Navbar = () => {
           </div>
         </Link>
         <Link href="/">
-          <div className="hidden md:flex" onClick={() => {}}>
+          <div className="hidden md:flex cursor-pointer" onClick={() => {}}>
             <Image src={images.logo02} objectFit="contain" width={32} height={32} alt="logo" />
           </div>
         </Link>
