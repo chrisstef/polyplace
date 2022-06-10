@@ -15,7 +15,7 @@ const MenuItems = ({ isMobile, active, setActive }) => {
   const generateLink = (i) => {
     switch (i) {
       case 0: return '/';
-      case 1: return '/created-nfts';
+      case 1: return '/listed-nfts';
       case 2: return '/my-nfts';
       default:
         break;
@@ -119,7 +119,7 @@ const Navbar = () => {
               height={20}
               alt="close"
               onClick={() => setIsOpen(false)}
-              className={theme === 'light' && 'filter invert'}
+              className={theme === 'light' ? 'filter invert' : undefined}
             />
           ) : (
             <Image
@@ -129,7 +129,7 @@ const Navbar = () => {
               height={25}
               alt="menu"
               onClick={() => setIsOpen(true)}
-              className={theme === 'light' && 'filter invert'}
+              className={theme === 'light' ? 'filter invert' : undefined}
             />
           )}
 

@@ -1,16 +1,27 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
+
+import { NFTContext } from '../context/NFTContext';
 import { Banner, CreatorCard, NFTCard } from '../components';
 
 import images from '../assets';
 import { makeId } from '../utils/makeId';
 
 const Home = () => {
+  const { fetchNFTs } = useContext(NFTContext);
   const [hideButtons, setHideButtons] = useState(false);
+  const [nfts, setNfts] = useState([]);
   const { theme } = useTheme();
   const parentRef = useRef(null);
   const scrollRef = useRef(null);
+
+  useEffect(() => {
+    fetchNFTs()
+      .then((items) => {
+        setNfts(items);
+      });
+  }, []);
 
   const handleScroll = (direction) => {
     const { current } = scrollRef;
@@ -78,7 +89,7 @@ const Home = () => {
                     layout="fill"
                     objectFit="contain"
                     alt="left_arrow"
-                    className={theme === 'light' && 'filter invert'}
+                    className={theme === 'light' ? 'filter invert' : undefined}
                   />
                 </div>
                 <div onClick={() => handleScroll('right')} className="absolute w-8 h-8 minlg:w-12 minlg:h-12 top-45 cursor-pointer right-0">
@@ -87,7 +98,7 @@ const Home = () => {
                     layout="fill"
                     objectFit="contain"
                     alt="right_arrow"
-                    className={theme === 'light' && 'filter invert'}
+                    className={theme === 'light' ? 'filter invert' : undefined}
                   />
                 </div>
               </>
@@ -98,11 +109,12 @@ const Home = () => {
 
         <div className="mt-10">
           <div className="flexBetween mx-4 xs:mx-0 minlg:mx-8 sm:flex-col sm:items-start">
-            <h1 className="flex-1 font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold sm:mb-4">Hot Bids 🔥</h1>
+            <h1 className="flex-1 font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold sm:mb-4">Hot NFTs 🔥</h1>
             <div>SearchBar</div>
           </div>
           <div className="mt-3 w-full flex flex-wrap justify-start md:justify-center">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+            {nfts.map((nft) => <NFTCard key={nft.tokenId} nft={nft} />)}
+            {/* {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
               <NFTCard
                 Card
                 key={`nft-${i}`}
@@ -115,7 +127,7 @@ const Home = () => {
                   description: 'What an NFT!',
                 }}
               />
-            ))}
+            ))} */}
           </div>
         </div>
       </div>
