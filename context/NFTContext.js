@@ -42,7 +42,7 @@ export const NFTProvider = ({ children }) => {
     window.location.reload();
   };
 
-  const uploadToIPFS = async (file, setFileUrl) => {
+  const uploadToIPFS = async (file) => {
     try {
       const added = await client.add({ content: file });
 
@@ -66,6 +66,7 @@ export const NFTProvider = ({ children }) => {
 
       const url = `https://ipfs.infura.io/ipfs/${added.path}`;
 
+      // eslint-disable-next-line no-use-before-define
       await createSale(url, price);
 
       router.push('/');
@@ -74,7 +75,7 @@ export const NFTProvider = ({ children }) => {
     }
   };
 
-  const createSale = async (url, formInputPrice) => {
+  const createSale = async (url, formInputPrice, isReselling, id) => {
     const web3Modal = new Web3Modal();
     const connection = await web3Modal.connect();
     const provider = new ethers.providers.Web3Provider(connection);
@@ -84,7 +85,9 @@ export const NFTProvider = ({ children }) => {
     const contract = fetchContract(signer);
     const listingPrice = await contract.getListingPrice();
 
-    const transaction = await contract.createToken(url, price, { value: listingPrice.toString() });
+    const transaction = !isReselling
+      ? await contract.createToken(url, price, { value: listingPrice.toString() })
+      : await contract.resellToken(id, price, { value: listingPrice.toString() });
 
     await transaction.wait();
   };
@@ -147,8 +150,23 @@ export const NFTProvider = ({ children }) => {
     return items;
   };
 
+  const buyNFT = async (nft) => {
+    const web3Modal = new Web3Modal();
+    const connection = await web3Modal.connect();
+    const provider = new ethers.providers.Web3Provider(connection);
+    const signer = provider.getSigner();
+
+    const contract = fetchContract(signer);
+
+    const price = ethers.utils.parseUnits(nft.price.toString(), 'ether');
+
+    const transaction = await contract.createMarketSale(nft.tokenId, { value: price });
+
+    await transaction.wait();
+  };
+
   return (
-    <NFTContext.Provider value={{ nftCurrency, connectWallet, currentAccount, uploadToIPFS, createNFT, fetchNFTs, fetchMyNFTsOrListedNFTs }}>
+    <NFTContext.Provider value={{ nftCurrency, connectWallet, currentAccount, uploadToIPFS, createNFT, fetchNFTs, fetchMyNFTsOrListedNFTs, buyNFT, createSale }}>
       {children}
     </NFTContext.Provider>
   );
