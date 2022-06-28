@@ -90,7 +90,7 @@ const MyNFTs = () => {
 
       {!isLoading && !nfts.length && !nftsCopy.length ? (
         <div className="flexCenter sm:p-4 p-16">
-          <h1 className="font-poppins dark:text-white text-nft-black-1 font-extrabold text-3xl">No NFTs Owned</h1>
+          <h1 className="font-poppins dark:text-white text-nft-black-1 font-extrabold text-3xl">No NFTs Owned!</h1>
         </div>
       ) : (
         <div className="sm:px-4 p-12 w-full minmd:w-4/5 flexCenter flex-col">

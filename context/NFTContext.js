@@ -15,7 +15,7 @@ export const NFTContext = React.createContext();
 export const NFTProvider = ({ children }) => {
   const [currentAccount, setCurrentAccount] = useState('');
   const [isLoadingNFT, setIsLoadingNFT] = useState(false);
-  const nftCurrency = 'ETH';
+  const nftCurrency = 'MATIC';
 
   const checkIfWalletIsConnected = async () => {
     if (!window.ethereum) return alert('Please Install Metamask.');
@@ -97,7 +97,7 @@ export const NFTProvider = ({ children }) => {
   const fetchNFTs = async () => {
     setIsLoadingNFT(false);
 
-    const provider = new ethers.providers.JsonRpcProvider();
+    const provider = new ethers.providers.JsonRpcProvider('https://matic-mumbai.chainstacklabs.com');
     const contract = fetchContract(provider);
 
     const data = await contract.fetchMarketItems();
