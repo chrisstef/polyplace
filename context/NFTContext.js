@@ -174,7 +174,20 @@ export const NFTProvider = ({ children }) => {
   };
 
   return (
-    <NFTContext.Provider value={{ nftCurrency, connectWallet, currentAccount, uploadToIPFS, createNFT, fetchNFTs, fetchMyNFTsOrListedNFTs, buyNFT, createSale, isLoadingNFT }}>
+    <NFTContext.Provider
+      value={
+        { nftCurrency,
+          connectWallet,
+          currentAccount,
+          uploadToIPFS,
+          createNFT,
+          fetchNFTs,
+          fetchMyNFTsOrListedNFTs,
+          buyNFT,
+          createSale,
+          isLoadingNFT }
+        }
+    >
       {children}
     </NFTContext.Provider>
   );
