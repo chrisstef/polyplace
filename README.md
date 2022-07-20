@@ -1,4 +1,6 @@
-
+<p align="center" width="200">
+<img src="/assets/logo02.png" alt="Alt text logo" title="Logo">
+</p>
 
 # Polyplace
 
