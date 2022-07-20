@@ -102,11 +102,11 @@ The user can access the application via web-browser, and he must have the Metama
 
 ### NFT Marketplace features
 
-The user can perform the following actions on this NFT Marketplace:
+Users can perform the following actions on the NFT Marketplace:
 
 #### Mint
 
-The user must input a name, description and upload a file (image) to mint his own NFT. Once minted, a representation of this NFT will be displayed in the marketplace and it will be owned by its creator. This is open for everyone, meaning everyone can participate in this NFT creation within this platform. 
+Input a name, description and upload a file (image) to mint an NFT. Once minted, a representation of this NFT will be displayed in the marketplace and it will be owned by its creator. This is open for everyone, meaning everyone can participate in this NFT creation within this platform. 
 
 #### Buy NFT
 
@@ -114,7 +114,13 @@ A user can buy those NFT which someone else offered. This will require paying th
 
 #### Sell NFT
 
-The user can sell his NFT by specifying its price (in Matic). If someone fulfills this offer, then the NFT and it's ownership is transferred to a new owner. 
+A user can sell his NFT by specifying its price (in Matic). If someone fulfills this offer, then the NFT and it's ownership is transferred to a new owner. 
+
+### Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Resources
 
