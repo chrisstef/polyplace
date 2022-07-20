@@ -116,13 +116,13 @@ A user can buy those NFT which someone else offered. This will require paying th
 
 A user can sell his NFT by specifying its price (in Matic). If someone fulfills this offer, then the NFT and it's ownership is transferred to a new owner. 
 
-### Deploy on Vercel
+## Resources
+
+#### Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## Resources
 
 - [polygon.technology](https://polygon.technology/)
 - [solidity](https://docs.soliditylang.org/en/v0.8.15/)
