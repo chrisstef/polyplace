@@ -82,7 +82,7 @@ $ npm run dev
 - `Next.js`
 - `hardhat`
 - `ethers.js`
-- `Node.js`
+- `node.js`
 - `Metamask`
 - `IPFS`
 
@@ -104,7 +104,7 @@ The user can perform the following actions on this NFT Marketplace:
 
 #### Mint
 
-The user must input a name, description and upload a file (image) to mint his own NFT. Once minted, a representation of this NFT will be displayed in the marketplace and initially it will be owned by its creator. This is open for everyone, meaning everyone can participate in this NFT creation within this platform. 
+The user must input a name, description and upload a file (image) to mint his own NFT. Once minted, a representation of this NFT will be displayed in the marketplace and it will be owned by its creator. This is open for everyone, meaning everyone can participate in this NFT creation within this platform. 
 
 #### Buy NFT
 
