@@ -120,15 +120,10 @@ $ npm run dev
 
 ## Resources
 
-#### Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
 - [polygon.technology](https://polygon.technology/)
 - [solidity](https://docs.soliditylang.org/en/v0.8.15/)
 - [node.js](https://nodejs.org/)
 - [ethers.js](https://docs.ethers.io/v5/)
 - [next.js](https://nextjs.org/)
 - [IPFS](https://ipfs.io/)
+- [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
