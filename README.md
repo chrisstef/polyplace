@@ -95,7 +95,7 @@ npx hardhat run scripts/deploy.js --network hardhat
 
 First of all, it is required to install Metamask wallet as a browser extension: https://metamask.io/
 
-Then you should configure Metamask to connect to your local blockchain run by Ganache. This requires the following:
+Then you should configure Metamask to connect to your local blockchain. This requires the following:
 - Open Metamask
 - Open the Network Configuration panel
 - Open Custom RPC
@@ -121,7 +121,7 @@ $ npm run dev
 ## Resources
 
 - [polygon.technology](https://polygon.technology/)
-- [solidity](https://docs.soliditylang.org/en/v0.8.15/)
+- [Solidity](https://docs.soliditylang.org/en/v0.8.15/)
 - [node.js](https://nodejs.org/)
 - [ethers.js](https://docs.ethers.io/v5/)
 - [next.js](https://nextjs.org/)
