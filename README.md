@@ -4,7 +4,7 @@
 
 # Polyplace
 
-An open decentralized NFT Marketplace built with Solidity and Next.js, powered by Polygon Technologies. It basically is an open platform where users can mint their own NFTs and expose it on the marketplace.
+An open decentralized NFT Marketplace built with Solidity and Next.js, powered by Polygon Technologies. It basically is an open platform where users can mint and trade their own NFTs.
 
 ## Table of Contents
 
