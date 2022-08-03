@@ -22,7 +22,7 @@ An open platform where users can mint their own NFT and expose it on a marketpla
 
 ### Project architecture
 
-The user can access the application via web-browser, and he must have the Metamask wallet installed. This interface, built with Next.js, relies on the ethers.js library to communicate with the smart contracts through Metamask. This means that the data reflected on the front-end application is fetched from the Polygon blockchain. Each action performed by the user (mint a NFT, sell NFT, buy NFT...) creates a transaction on Polygon, which will require Metamask confirmation and pay a small fee, and this transaction will permanently modify the state of the NFTMarketplace smart contracts. On top of it, the user will upload the NFT Metadata to the IPFS, creating a permanent hash which will be permanently recorded on the blockchain itself to prove ownership.
+The user can access the application via web-browser, and he must have the Metamask wallet installed. This interface, built with Next.js, relies on the ethers.js library to communicate with the smart contracts through Metamask. This means that the data reflected on the front-end application is fetched from the Polygon blockchain. Each action performed by the user (mint a NFT, sell NFT, buy NFT...) creates a transaction on Polygon, which will require Metamask confirmation and pay a small fee, and this transaction will permanently modify the state of the NFTMarketplace smart contracts. On top of it, the user will upload the NFT Metadata to the IPFS, generating a hash which will be permanently recorded on the blockchain to prove ownership.
 
 ### Features
 
