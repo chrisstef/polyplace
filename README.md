@@ -96,10 +96,10 @@ npx hardhat run scripts/deploy.js --network hardhat
 First of all, it is required to install Metamask wallet as a browser extension: https://metamask.io/
 
 Then you should configure Metamask to connect to your local blockchain. This requires the following:
-- Open Metamask
-- Open the Network Configuration panel
-- Open Custom RPC
-- Conect to Matic Mumbai Testnet.
+- Open Metamask.
+- Open the Network Configuration panel.
+- Open Custom RPC.
+- Connect to Matic Mumbai Testnet.
 
 Finally you just need to run the following command in your terminal to open the User Interface:
 
@@ -126,4 +126,4 @@ $ npm run dev
 - [ethers.js](https://docs.ethers.io/v5/)
 - [next.js](https://nextjs.org/)
 - [IPFS](https://ipfs.io/)
-- [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+- [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
