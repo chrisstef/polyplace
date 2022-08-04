@@ -74,7 +74,7 @@ npm install -g hardhat
 First, you will have to set up a local network by running the following command:
 
 ```
-npm hardhat node
+npx hardhat node
 ```
 
 Then, you will have to compile the smart contracts by running the following command in your terminal:
