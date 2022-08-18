@@ -59,7 +59,7 @@ export const NFTProvider = ({ children }) => {
     try {
       const added = await client.add({ content: file });
 
-      const url = `https://polyplace.infura-ipfs.io/ipfs/${added.path}`;
+      const url = `https://polyplacedapp.infura-ipfs.io/ipfs/${added.path}`;
       console.log(`Upload to IPFS url: ${url}`);
       return url;
     } catch (error) {
@@ -77,7 +77,7 @@ export const NFTProvider = ({ children }) => {
     try {
       const added = await client.add(data);
 
-      const url = `https://polyplace.infura-ipfs.io/ipfs/${added.path}`;
+      const url = `https://polyplacedapp.infura-ipfs.io/ipfs/${added.path}`;
 
       console.log(`Created NFT url: ${url}`);
 

@@ -1,7 +1,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['polyplace.infura-ipfs.io'],
+    domains: ['polyplacedapp.infura-ipfs.io'],
   },
 };
 
