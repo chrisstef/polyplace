@@ -8,11 +8,13 @@ import { create as ipfsHttpClient } from 'ipfs-http-client';
 import { MarketAddress, MarketAddressABI } from './constants';
 
 const subdomainName = 'polyplacedapp';
-const projectId = process.env.NEXT_PUBLIC_IPFS_PROJECT_ID;
-const projectSecret = process.env.NEXT_PUBLIC_API_KEY_SECRET;
+const projectId = '2DXggWEHNruG1od5gCfYg2cRW43';
+const projectSecret = '46bb4d3d130a50b8b0f642b668535027';
 
-const authorization = `Basic ${Buffer.from(`${projectId}:${projectSecret}`).toString('base64')}`;
+const authorization = `Basic ${btoa(`${projectId}:${projectSecret}`)}`;
+
 const endpointBasePath = `https://${subdomainName}.infura-ipfs.io/ipfs/`;
+
 const client = ipfsHttpClient({
   url: 'https://ipfs.infura.io:5001/api/v0',
   headers: {
@@ -81,7 +83,6 @@ export const NFTProvider = ({ children }) => {
 
       console.log(`Created NFT url: ${url}`);
 
-      // eslint-disable-next-line no-use-before-define
       await createSale(url, price);
 
       router.push('/');
