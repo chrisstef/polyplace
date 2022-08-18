@@ -3,19 +3,18 @@ import Web3Modal from 'web3modal';
 import { ethers } from 'ethers';
 import axios from 'axios';
 
+import { create as ipfsHttpClient } from 'ipfs-http-client';
+
 import { MarketAddress, MarketAddressABI } from './constants';
 
 const projectId = process.env.NEXT_PUBLIC_IPFS_PROJECT_ID;
 const projectSecret = process.env.NEXT_PUBLIC_API_KEY_SECRET;
 
-const ipfsClient = require('ipfs-http-client');
-
 const auth = `Basic ${Buffer.from(`${projectId}:${projectSecret}`).toString('base64')}`;
-const client = ipfsClient.create({
+const client = ipfsHttpClient({
   host: 'ipfs.infura.io',
   port: 5001,
   protocol: 'https',
-  apiPath: '/ipfs/api/v0',
   headers: {
     authorization: auth,
   },
