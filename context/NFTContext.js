@@ -2,17 +2,21 @@ import React, { useState, useEffect } from 'react';
 import Web3Modal from 'web3modal';
 import { ethers } from 'ethers';
 import axios from 'axios';
-import { create as ipfsHttpClient } from 'ipfs-http-client';
 
 import { MarketAddress, MarketAddressABI } from './constants';
 
 const projectId = process.env.NEXT_PUBLIC_IPFS_PROJECT_ID;
 const projectSecret = process.env.NEXT_PUBLIC_API_KEY_SECRET;
 
-const client = ipfsHttpClient({
-  url: 'https://ipfs.infura.io:5001/api/v0',
+const ipfsClient = require('ipfs-http-client');
+
+const auth = `Basic ${Buffer.from(`${projectId}:${projectSecret}`).toString('base64')}`;
+const client = ipfsClient.create({
+  host: 'ipfs.infura.io',
+  port: 5001,
+  protocol: 'https',
   headers: {
-    authorization: `Basic ${Buffer.from(`${projectId}:${projectSecret}`).toString('base64')}`,
+    authorization: auth,
   },
 });
 
