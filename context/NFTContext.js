@@ -7,16 +7,16 @@ import { create as ipfsHttpClient } from 'ipfs-http-client';
 
 import { MarketAddress, MarketAddressABI } from './constants';
 
+const subdomainName = 'polyplacedapp';
 const projectId = process.env.NEXT_PUBLIC_IPFS_PROJECT_ID;
 const projectSecret = process.env.NEXT_PUBLIC_API_KEY_SECRET;
 
-const auth = `Basic ${Buffer.from(`${projectId}:${projectSecret}`).toString('base64')}`;
+const authorization = `Basic ${Buffer.from(`${projectId}:${projectSecret}`).toString('base64')}`;
+const endpointBasePath = `https://${subdomainName}.infura-ipfs.io/ipfs/`;
 const client = ipfsHttpClient({
-  host: 'ipfs.infura.io',
-  port: 5001,
-  protocol: 'https',
+  url: 'https://ipfs.infura.io:5001/api/v0',
   headers: {
-    auth,
+    authorization,
   },
 });
 
@@ -59,7 +59,7 @@ export const NFTProvider = ({ children }) => {
     try {
       const added = await client.add({ content: file });
 
-      const url = `https://polyplacedapp.infura-ipfs.io/ipfs/${added.path}`;
+      const url = endpointBasePath + added.path;
       console.log(`Upload to IPFS url: ${url}`);
       return url;
     } catch (error) {
@@ -77,7 +77,7 @@ export const NFTProvider = ({ children }) => {
     try {
       const added = await client.add(data);
 
-      const url = `https://polyplacedapp.infura-ipfs.io/ipfs/${added.path}`;
+      const url = endpointBasePath + added.path;
 
       console.log(`Created NFT url: ${url}`);
 
