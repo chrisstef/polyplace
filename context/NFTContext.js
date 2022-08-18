@@ -15,6 +15,7 @@ const client = ipfsClient.create({
   host: 'ipfs.infura.io',
   port: 5001,
   protocol: 'https',
+  apiPath: '/ipfs/api/v0',
   headers: {
     authorization: auth,
   },
