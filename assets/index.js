@@ -6,7 +6,7 @@ import cross from './cross.png';
 import logo02 from './logo02.png';
 import menu from './menu.png';
 import discord from './discord.png';
-import instagram from './instagram.png';
+import github from './github.png';
 import telegram from './telegram.png';
 import twitter from './twitter.png';
 import upload from './upload.png';
@@ -35,7 +35,7 @@ export default {
   logo02,
   menu,
   discord,
-  instagram,
+  github,
   telegram,
   twitter,
   upload,

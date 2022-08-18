@@ -6,7 +6,15 @@ import { create as ipfsHttpClient } from 'ipfs-http-client';
 
 import { MarketAddress, MarketAddressABI } from './constants';
 
-const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0');
+const projectId = process.env.NEXT_PUBLIC_IPFS_PROJECT_ID;
+const projectSecret = process.env.NEXT_PUBLIC_API_KEY_SECRET;
+
+const client = ipfsHttpClient({
+  url: 'https://ipfs.infura.io:5001/api/v0',
+  headers: {
+    authorization: `Basic ${Buffer.from(`${projectId}:${projectSecret}`).toString('base64')}`,
+  },
+});
 
 const fetchContract = (signerOrProvider) => new ethers.Contract(MarketAddress, MarketAddressABI, signerOrProvider);
 
@@ -47,8 +55,8 @@ export const NFTProvider = ({ children }) => {
     try {
       const added = await client.add({ content: file });
 
-      const url = `https://ipfs.infura.io/ipfs/${added.path}`;
-
+      const url = `https://polyplace.infura-ipfs.io/ipfs/${added.path}`;
+      console.log(`Upload to IPFS url: ${url}`);
       return url;
     } catch (error) {
       console.log('Error uploading file to IPFS.');
@@ -65,7 +73,9 @@ export const NFTProvider = ({ children }) => {
     try {
       const added = await client.add(data);
 
-      const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+      const url = `https://polyplace.infura-ipfs.io/ipfs/${added.path}`;
+
+      console.log(`Created NFT url: ${url}`);
 
       // eslint-disable-next-line no-use-before-define
       await createSale(url, price);
