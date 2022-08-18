@@ -4,7 +4,7 @@
 
 # Polyplace
 
-An open decentralized NFT Marketplace built with Solidity and Next.js, powered by Polygon Technologies. It basically is an open platform where users can mint their own NFTs and expose it on the marketplace.
+An open decentralized NFT Marketplace built with Solidity and Next.js, powered by Polygon Technologies. It basically is an open platform where users can mint and trade their own NFTs.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ An open decentralized NFT Marketplace built with Solidity and Next.js, powered b
 
 ## The Project
 
-An open platform where users can mint their own NFT and expose it on a marketplace by making an offer or buying NFT from others. It includes:
+An open platform where users can mint their own NFTs and list them on a marketplace or buying NFT from others. It includes:
 
 - A smart contract which represents a collection of NFTs by following the ERC-721 standard.
 - A smart contract which represents the NFT Marketplace and contains all the logic to make offers, execute offers...
@@ -22,9 +22,9 @@ An open platform where users can mint their own NFT and expose it on a marketpla
 
 ### Project architecture
 
-The user can access the application via web-browser, and he must have the Metamask wallet installed. This interface, built with Next.js, relies on the ethers.js library to communicate with the smart contracts through Metamask. This means that the data reflected on the front-end application is fetched from the Polygon blockchain. Each action performed by the user (mint a NFT, sell NFT, buy NFT...) creates a transaction on Polygon, which will require Metamask confirmation and pay a small fee, and this transaction will permanently modify the state of the NFTMarketplace smart contracts. On top of it, the user will upload the NFT Metadata to the IPFS, creating a permanent hash which will be permanently recorded on the blockchain itself to prove ownership.
+Users can access the application via web-browser, and must have the Metamask wallet installed. The interface, built with Next.js, relies on the ethers.js library to communicate with the smart contracts through Metamask. This means that the data reflected on the front-end application is fetched from the Polygon blockchain. Each action performed by the user (mint a NFT, sell NFT, buy NFT...) creates a transaction on Polygon, which will require Metamask confirmation and pay a small fee, and this transaction will permanently modify the state of the NFTMarketplace smart contracts. On top of it, users NFT Metadata will be uploaded to the IPFS, generating a hash which will be permanently recorded on the blockchain to prove ownership.
 
-### NFT Marketplace features
+### Features
 
 Users can perform the following actions on the NFT Marketplace:
 
@@ -34,11 +34,11 @@ Input a name, description and upload a file (image) to mint an NFT. Once minted,
 
 #### Buy NFT
 
-A user can buy those NFT which someone else offered. This will require paying the requested price.
+A user can buy NFTs which someone else offered. This will require paying the requested price.
 
 #### Sell NFT
 
-A user can sell his NFT by specifying its price (in Matic). If someone fulfills this offer, then the NFT and it's ownership is transferred to a new owner. 
+A user can sell his NFT by specifying its price (in Matic). If someone fulfills this offer, then the NFT and it's ownership is transferred to the new owner. 
 
 
 ## Getting Started
@@ -74,7 +74,7 @@ npm install -g hardhat
 First, you will have to set up a local network by running the following command:
 
 ```
-npm hardhat node
+npx hardhat node
 ```
 
 Then, you will have to compile the smart contracts by running the following command in your terminal:
@@ -95,11 +95,11 @@ npx hardhat run scripts/deploy.js --network hardhat
 
 First of all, it is required to install Metamask wallet as a browser extension: https://metamask.io/
 
-Then you should configure Metamask to connect to your local blockchain run by Ganache. This requires the following:
-- Open Metamask
-- Open the Network Configuration panel
-- Open Custom RPC
-- Conect to Matic Mumbai Testnet.
+Then you should configure Metamask to connect to your local blockchain. This requires the following:
+- Open Metamask.
+- Open the Network Configuration panel.
+- Open Custom RPC.
+- Connect to Matic Mumbai Testnet.
 
 Finally you just need to run the following command in your terminal to open the User Interface:
 
@@ -121,9 +121,9 @@ $ npm run dev
 ## Resources
 
 - [polygon.technology](https://polygon.technology/)
-- [solidity](https://docs.soliditylang.org/en/v0.8.15/)
+- [Solidity](https://docs.soliditylang.org/en/v0.8.15/)
 - [node.js](https://nodejs.org/)
 - [ethers.js](https://docs.ethers.io/v5/)
 - [next.js](https://nextjs.org/)
 - [IPFS](https://ipfs.io/)
-- [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+- [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
