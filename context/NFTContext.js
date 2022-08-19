@@ -6,7 +6,7 @@ import { create as ipfsHttpClient } from 'ipfs-http-client';
 
 import { MarketAddress, MarketAddressABI } from './constants';
 
-const subdomainName = 'polyplacedapp';
+const subdomainName = 'polyplace';
 const projectId = '2DZ5SclLb6YJBoDvir5Rh96PAVt';
 const projectSecret = 'd44b2bde4d2bb227907264225330c102';
 
