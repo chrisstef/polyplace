@@ -28,7 +28,7 @@ const Home = () => {
         setNftsCopy(items);
         setIsLoading(false);
       });
-  }, [fetchNFTs]);
+  }, []);
 
   useEffect(() => {
     const sortedNfts = [...nfts];
@@ -203,3 +203,4 @@ const Home = () => {
 };
 
 export default Home;
+

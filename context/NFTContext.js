@@ -82,6 +82,7 @@ export const NFTProvider = ({ children }) => {
       console.log(`Created NFT url: ${url}`);
 
       await createSale(url, price);
+
       router.push('/');
     } catch (error) {
       console.log('error uploading file');
