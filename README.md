@@ -1,4 +1,4 @@
-<p align="center" width="200">
+<p align="center" height="100" width="100">
 <img src="/assets/logo02.png" alt="Alt text logo" title="Logo">
 </p>
 
