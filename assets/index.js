@@ -25,6 +25,7 @@ import left from './left.png';
 import headerbg from './headerbg.png';
 import loader from './loader.gif';
 import arrow from './arrow.png';
+import youtube from './youtube.png';
 
 export default {
   heartOutline,
@@ -54,4 +55,5 @@ export default {
   headerbg,
   loader,
   arrow,
+  youtube,
 };

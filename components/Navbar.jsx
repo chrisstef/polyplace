@@ -112,7 +112,7 @@ const Navbar = () => {
               setActive('Explore NFTs');
             }}
           >
-            <Image src={images.logo02} objectFit="contain" width={48} height={48} alt="logo" />
+            <Image src={images.logo02} objectFit="contain" width={40} height={40} alt="logo" />
             <p className="dark:text-white text-nft-black-1 font-bold text-xl ml-1">Polyplace</p>
           </div>
         </Link>
@@ -124,7 +124,7 @@ const Navbar = () => {
               setIsOpen(false);
             }}
           >
-            <Image src={images.logo02} objectFit="contain" width={48} height={48} alt="logo" />
+            <Image src={images.logo02} objectFit="contain" width={40} height={40} alt="logomobile" />
           </div>
         </Link>
       </div>

@@ -1,15 +1,9 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useTheme } from 'next-themes';
 
 import images from '../assets';
 import Button from './Button';
-
-const FooterLinks = ({ heading, items, extraClasses }) => (
-  <div className={`flex-1 justify-start items-start ${extraClasses}`}>
-    <h3 className="font-poppins dark:text-white text-nft-black-1 font-semibold text-xl mb-10">{heading}</h3>
-    {items.map((item, index) => <p key={item + index} className="font-poppins dark:text-white text-nft-black-1 font-normal text-base cursor-pointer dark:hover:text-nft-gray-1 hover:text-nft-black-1 my-3 transition duration-300">{item}</p>)}
-  </div>
-);
 
 const Footer = () => {
   const { theme } = useTheme();
@@ -19,7 +13,10 @@ const Footer = () => {
       <div className="w-full minmd:w-4/5 flex flex-row md:flex-col sm:px-4 px-16">
         <div className="flexStart flex-1 flex-col">
           <div className="flexCenter cursor-pointer">
-            <Image src={images.logo02} objectFit="contain" width={48} height={48} alt="logo" />
+            <Link href="/">
+
+              <Image src={images.logo02} objectFit="contain" width={40} height={40} alt="logo" />
+            </Link>
             <p className=" dark:text-white text-nft-dark font-semibold text-lg ml-1">Polyplace</p>
           </div>
           <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-base mt-6">Get the latest updates</p>
@@ -34,22 +31,55 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        <div className="flex-1 flexBetweenStart flex-wrap ml-10 md:ml-0 md:mt-8">
-          <FooterLinks heading="Polyplace" items={['Explore', 'How it Works', 'Contact Us']} />
-          <FooterLinks heading="Support" items={['Help Center', 'Legal', 'Privacy policy']} extraClasses="ml-4" />
+        <div className="flex-1 flexBetweenStart flex-wrap ml-10 md:ml-0 md:mt-8 font-semibold">
+          <div>
+            <h2 className="font-poppins dark:text-white text-nft-black-1 font-semibold text-xl mb-10">Polyplace</h2>
+            <ul className="font-poppins text-nft-black-1 dark:text-white">
+              <li className="mb-3">
+                <a href="https://mumbai.polygonscan.com/address/0xC9798FF24bEa832c70E66554a35211677D64a627" target="_blank" className="font-poppins dark:text-white text-nft-black-1 font-normal text-base cursor-pointer dark:hover:text-nft-gray-1 hover:text-nft-black-1 my-3 transition duration-300" rel="noreferrer">Smart Contract</a>
+              </li>
+              <li className="mb-3">
+                <a href="https://github.com/chrisstef/polyplace#the-project" target="_blank" className="font-poppins dark:text-white text-nft-black-1 font-normal text-base cursor-pointer dark:hover:text-nft-gray-1 hover:text-nft-black-1 my-3 transition duration-300" rel="noreferrer">The Project</a>
+              </li>
+              <li className="mb-3">
+                <a href="https://github.com/chrisstef/polyplace#getting-started" target="_blank" className="font-poppins dark:text-white text-nft-black-1 font-normal text-base cursor-pointer dark:hover:text-nft-gray-1 hover:text-nft-black-1 my-3 transition duration-300" rel="noreferrer">Developers</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="font-poppins dark:text-white text-nft-black-1 font-semibold text-xl mb-10">Polygon</h2>
+            <ul className="text-gray-600 dark:text-gray-400">
+              <li className="mb-3">
+                <a href="https://polygon.technology/" target="_blank" className="font-poppins dark:text-white text-nft-black-1 font-normal text-base cursor-pointer dark:hover:text-nft-gray-1 hover:text-nft-black-1 my-3 transition duration-300" rel="noreferrer">Polygon Technology</a>
+              </li>
+              <li className="mb-3">
+                <a href="https://mumbai.polygonscan.com/" target="_blank" className="font-poppins dark:text-white text-nft-black-1 font-normal text-base cursor-pointer dark:hover:text-nft-gray-1 hover:text-nft-black-1 my-3 transition duration-300" rel="noreferrer">Mumbai Explorer</a>
+              </li>
+              <li className="mb-3">
+                <a href="https://mumbaifaucet.com/" target="_blank" className="font-poppins dark:text-white text-nft-black-1 font-normal text-base cursor-pointer dark:hover:text-nft-gray-1 hover:text-nft-black-1 my-3 transition duration-300" rel="noreferrer">Faucet</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-
       <div className="flexCenter w-full mt-5 border-t dark:border-nft-black-1 border-nft-gray-1 sm:px-4 px-16">
         <div className="flexBetween flex-row w-full minmd:w-4/5 sm:flex-col mt-7 mb-0">
           <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-base">Polyplace Inc. All Rights Reserved.</p>
           <div className="flex flex-row sm:mt-4">
-            {[images.github, images.twitter, images.telegram, images.discord].map((image, index) => (
-              <div className="mx-2 cursor-pointer opacity-80 hover:opacity-100 hover:scale-110 transition duration-500" key={`image ${index}`}>
-                <Image src={image} key={index} objectFit="contain" width={24} height={24} alt="social" className={theme === 'light' ? 'filter invert' : ''} />
-              </div>
-            ))}
+            <div className={`${theme === 'light' ? 'filter invert' : ''} space-x-6`}>
+              <a target="_blank" href="https://github.com/chrisstef" alt="github" rel="noreferrer">
+                <Image src={images.github} objectFit="contain" className="cursor-pointer opacity-80 hover:opacity-100 hover:scale-105 transition duration-500" width={24} height={24} alt="github" />
+              </a>
+              <a target="_blank" href="https://twitter.com/ChristosStefan4" alt="twitter" rel="noreferrer">
+                <Image src={images.twitter} objectFit="contain" className="cursor-pointer opacity-80 hover:opacity-100 hover:scale-105 transition duration-500" width={24} height={24} alt="twitter" />
+              </a>
+              <a target="_blank" href="https://t.me/kaieverdream" alt="telegram" rel="noreferrer">
+                <Image src={images.telegram} objectFit="contain" className="cursor-pointer opacity-80 hover:opacity-100 hover:scale-105 transition duration-500" width={24} height={24} alt="telegram" />
+              </a>
+              <a target="_blank" href="https://www.youtube.com/channel/UCtOqEoFDiyw0usiJHE5ll_Q" alt="youtube" rel="noreferrer">
+                <Image src={images.youtube} objectFit="contain" className="cursor-pointer opacity-80 hover:opacity-100 hover:scale-105 transition duration-500" width={24} height={24} alt="youtube" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
