@@ -113,7 +113,7 @@ const Navbar = () => {
             }}
           >
             <Image src={images.logo02} objectFit="contain" width={48} height={48} alt="logo" />
-            <p className="dark:text-white text-nft-black-1 font-semibold text-lg ml-1">polyplace</p>
+            <p className="dark:text-white text-nft-black-1 font-bold text-xl ml-1">Polyplace</p>
           </div>
         </Link>
         <Link href="/">
