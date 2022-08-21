@@ -115,6 +115,8 @@ npm run dev
 
 ### Smart Contract Visualization
 
+Below you can view the smart contract functionalities (and it's interactions).
+
 <p align="center">
 <img src="/assets/NftViz.png" alt="SCV" title="Smart Contract Visualization">
 </p>
