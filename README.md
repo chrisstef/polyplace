@@ -61,7 +61,7 @@ git clone https://github.com/chrisstef/polyplace.git
 
 ### Installing
 
-First, you will need to install the dependencies with: `npm install`.
+First, you will need to install the dependencies.
 
 Run the following command in your terminal after cloning the main repo:
 
@@ -110,8 +110,15 @@ Then you should configure Metamask to connect to your local blockchain. This req
 Finally you just need to run the following command in your terminal to open the User Interface:
 
 ```
-$ npm run dev
+npm run dev
 ```
+
+### Smart Contract Visualization
+
+<p align="center">
+<img src="/assets/logo02.png" alt="SCV" title="Smart Contract Visualization">
+</p>
+
 
 ### Technology stack
 
