@@ -9,9 +9,11 @@ An open decentralized NFT Marketplace built with Solidity and Next.js, powered b
 The smart contract has been deployed in the following (test) network: Mumbai.
 
 `NFTMarketplace` Smart Contract Address:
+
 https://mumbai.polygonscan.com/address/0xC9798FF24bEa832c70E66554a35211677D64a627
 
-Demonstrating video:
+Demo video:
+
 https://www.youtube.com/watch?v=kVIb7MGJ53k&t=36s
 
 ## Table of Contents
