@@ -46,6 +46,14 @@ A user can buy NFTs which someone else offered. This will require paying the req
 
 A user can sell his NFT by specifying its price (in Matic). If someone fulfills this offer, then the NFT and it's ownership is transferred to the new owner. 
 
+### Smart Contract Visualization
+
+Below you can view the smart contract functionalities (and it's interactions).
+
+<p align="center">
+<img src="/assets/NftViz.png" alt="SCV" title="Smart Contract Visualization">
+</p>
+
 
 ## Getting Started
 
@@ -112,15 +120,6 @@ Finally you just need to run the following command in your terminal to open the 
 ```
 npm run dev
 ```
-
-### Smart Contract Visualization
-
-Below you can view the smart contract functionalities (and it's interactions).
-
-<p align="center">
-<img src="/assets/NftViz.png" alt="SCV" title="Smart Contract Visualization">
-</p>
-
 
 ### Technology stack
 
