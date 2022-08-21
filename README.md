@@ -116,7 +116,7 @@ npm run dev
 ### Smart Contract Visualization
 
 <p align="center">
-<img src="/assets/logo02.png" alt="SCV" title="Smart Contract Visualization">
+<img src="/assets/NftViz.png" alt="SCV" title="Smart Contract Visualization">
 </p>
 
 
