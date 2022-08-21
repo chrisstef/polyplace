@@ -131,6 +131,7 @@ Below you can view the smart contract functionalities (and it's interactions).
 - `node.js`
 - `Metamask`
 - `IPFS`
+- `Infura`
 
 
 ## Resources
@@ -141,4 +142,5 @@ Below you can view the smart contract functionalities (and it's interactions).
 - [ethers.js](https://docs.ethers.io/v5/)
 - [next.js](https://nextjs.org/)
 - [IPFS](https://ipfs.io/)
+- [Infura](https://infura.io/)
 - [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
