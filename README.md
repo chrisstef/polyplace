@@ -81,7 +81,7 @@ Run the following command in your terminal after cloning the main repo:
 npm install
 ```
 
-Then, you will need to install hardhat globally by running the following command int your terminal:
+Then, you will need to install hardhat globally by running the following command into your terminal:
 
 ```
 npm install -g hardhat
