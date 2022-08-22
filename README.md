@@ -109,6 +109,8 @@ Deploy the contracts on your hardhat local network by running the following comm
 npx hardhat run scripts/deploy.js --network hardhat
 ```
 
+Paste the deployed address in the `constants.js` file.
+
 Finally you just need to run the following command in your terminal to open the User Interface:
 
 ```
