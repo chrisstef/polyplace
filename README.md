@@ -113,11 +113,13 @@ Paste the deployed address in the `constants.js` file.
 
 Remove the argument provided in the JsonRpcProvider which is located in the line 111 of the `NFTContext.js` file.
 
-Finally you just need to run the following command in your terminal to open the User Interface:
+Finally, run the following command in your terminal to open the User Interface:
 
 ```
 npm run dev
 ```
+
+An instance of Polyplace will be up and running on your local environment.
 
 ### Connect to Mumbai Testnet
 
