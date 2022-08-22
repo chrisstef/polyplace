@@ -19,7 +19,7 @@ https://www.youtube.com/watch?v=kVIb7MGJ53k&t=36s
 ## Table of Contents
 
 - [The Project](#the-project)
-- [Getting Started](#getting-started)
+- [Developers](#developers)
 - [Resources](#resources)
 
 ## The Project
@@ -58,8 +58,24 @@ Below you can view the smart contract functions (and it's interactions).
 <img src="/assets/NftViz.png" alt="SCV" title="Smart Contract Visualization">
 </p>
 
+### Connect to Mumbai Testnet
 
-## Getting Started
+First of all, it is required to install Metamask wallet as a browser extension: https://metamask.io/
+
+Then you should configure Metamask to connect to your local blockchain. To do it manually:
+- Open Metamask.
+- Open the Network Configuration panel.
+- Open Custom RPC.
+- Connect to Mumbai Testnet.
+
+Another way to connect to Mumbai Testnet is by using the following link: https://chainlist.org/ and add the network of your choice by simply connecting your wallet.
+
+### Getting test MATIC
+
+You can get up to 2 MATIC/day by pasting your address here: https://mumbaifaucet.com/.
+
+
+## Developers
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
@@ -120,22 +136,6 @@ npm run dev
 ```
 
 An instance of Polyplace will be up and running on your local environment.
-
-### Connect to Mumbai Testnet
-
-First of all, it is required to install Metamask wallet as a browser extension: https://metamask.io/
-
-Then you should configure Metamask to connect to your local blockchain. To do it manually:
-- Open Metamask.
-- Open the Network Configuration panel.
-- Open Custom RPC.
-- Connect to Mumbai Testnet.
-
-Another way to connect to Mumbai Testnet is by using the following link: https://chainlist.org/ and add the network of your choice by simply connecting your wallet.
-
-### Getting test MATIC
-
-You can get up to 2 MATIC/day by pasting your address here: https://mumbaifaucet.com/.
 
 ### Technology stack
 
