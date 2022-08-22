@@ -48,7 +48,7 @@ A user can buy NFTs which someone else offered. This will require paying the req
 
 #### Sell NFT
 
-A user can sell his NFT by specifying its price (in Matic). If someone fulfills this offer, then the NFT and it's ownership is transferred to the new owner. 
+A user can sell his NFT by specifying its price (in MATIC). If someone fulfills this offer, then the NFT and it's ownership is transferred to the new owner. 
 
 ### Smart Contract Visualization
 
@@ -123,10 +123,9 @@ Then you should configure Metamask to connect to your local blockchain. To do it
 - Open Metamask.
 - Open the Network Configuration panel.
 - Open Custom RPC.
-- Connect to Matic Mumbai Testnet.
+- Connect to Mumbai Testnet.
 
-Another way to connect to Mumbai Testnet is by using the following link: https://chainlist.org/
-You can add the network of your choice by simply connecting your wallet.
+Another way to connect to Mumbai Testnet is by using the following link: https://chainlist.org/ and add the network of your choice by simply connecting your wallet.
 
 ### Getting test MATIC
 
