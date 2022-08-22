@@ -154,5 +154,5 @@ You can get up to 2 MATIC/day by pasting your address here: https://mumbaifaucet
 - [IPFS](https://ipfs.io/)
 - [Infura](https://infura.io/)
 - [Alchemy](https://www.alchemy.com/)
-- [Vercel](https://vercel.com/)
+- [Vercel](https://vercel.com/docs)
 
