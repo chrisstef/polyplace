@@ -24,7 +24,7 @@ https://www.youtube.com/watch?v=kVIb7MGJ53k&t=36s
 
 ## The Project
 
-An open platform where users can mint their own NFTs and list them on a marketplace or buying NFT from others. It includes:
+An open platform where users can mint their own NFTs and list them on a Marketplace or buying NFT from others. It includes:
 
 - A smart contract which represents a collection of NFTs by following the ERC-721 standard.
 - A smart contract which represents the NFT Marketplace and contains all the logic to make offers, execute offers...
@@ -32,7 +32,7 @@ An open platform where users can mint their own NFTs and list them on a marketpl
 
 ### Project architecture
 
-Users can access the application via web-browser, and must have the Metamask wallet installed. The interface, built with Next.js, relies on the ethers.js library to communicate with the smart contracts through Metamask. This means that the data reflected on the front-end application is fetched from the Polygon blockchain. Each action performed by the user (mint a NFT, sell NFT, buy NFT...) creates a transaction on Polygon, which will require Metamask confirmation and pay a small fee, and this transaction will permanently modify the state of the NFTMarketplace smart contracts. On top of it, users NFT Metadata will be uploaded to the IPFS, generating a hash which will be permanently recorded on the blockchain to prove ownership.
+Users can access the application via web-browser, and must have the Metamask wallet installed. The interface, built with Next.js, relies on the ethers.js library to communicate with the smart contracts through Metamask. This means that the data reflected on the front-end application is fetched from the Polygon blockchain. Each action performed by the user (mint an NFT, sell NFT, buy NFT...) creates a transaction on Polygon, which will requires Metamask confirmation and a small fee, and this transaction will permanently modify the state of the NFTMarketplace smart contracts. On top of it, users NFT Metadata will be uploaded to the IPFS, generating a hash which will be permanently recorded on the blockchain to prove ownership.
 
 ### Features
 
@@ -40,15 +40,15 @@ Users can perform the following actions on the NFT Marketplace:
 
 #### Mint
 
-Input a name, description and upload a file (image) to mint an NFT. Once minted, a representation of this NFT will be displayed in the marketplace and it will be owned by its creator. This is open for everyone, meaning everyone can participate in this NFT creation within this platform. 
+Input a name, description and upload a file (image) to mint an NFT. Once minted, a representation of this NFT will be displayed in the marketplace and it will be owned by its creator. This is open for everyone, meaning everyone can participate in this NFT creation through this platform. 
 
 #### Buy NFT
 
-A user can buy NFTs which someone else offered. This will require paying the requested price.
+A user can buy NFTs which someone else offered. This will require paying the requested price and a small fee.
 
 #### Sell NFT
 
-A user can sell his NFT by specifying its price (in MATIC). If someone fulfills this offer, then the NFT and it's ownership is transferred to the new owner. 
+Users can sell their NFT by specifying its price (in MATIC). If someone fulfills this offer, then the NFT and it's ownership is transferred to the new owner. 
 
 ### Smart Contract Visualization
 
@@ -103,7 +103,7 @@ npx hardhat compile
 
 ### Deployment on Local Blockchain
 
-Deploy the contracts on your hardhat local blockchain by running the following command:
+Deploy the contracts on your hardhat local network by running the following command:
 
 ```
 npx hardhat run scripts/deploy.js --network hardhat
