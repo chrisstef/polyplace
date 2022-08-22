@@ -109,21 +109,24 @@ Deploy the contracts on your hardhat local blockchain by running the following c
 npx hardhat run scripts/deploy.js --network hardhat
 ```
 
-### Opening the User Interface
-
-First of all, it is required to install Metamask wallet as a browser extension: https://metamask.io/
-
-Then you should configure Metamask to connect to your local blockchain. This requires the following:
-- Open Metamask.
-- Open the Network Configuration panel.
-- Open Custom RPC.
-- Connect to Matic Mumbai Testnet.
-
 Finally you just need to run the following command in your terminal to open the User Interface:
 
 ```
 npm run dev
 ```
+
+### Connect to Mumbai Testnet
+
+First of all, it is required to install Metamask wallet as a browser extension: https://metamask.io/
+
+Then you should configure Metamask to connect to your local blockchain. To do it manually:
+- Open Metamask.
+- Open the Network Configuration panel.
+- Open Custom RPC.
+- Connect to Matic Mumbai Testnet.
+
+Another way to connect to Mumbai Testnet is by using the following link: https://chainlist.org/
+You can add the network of your choice by simply connecting your wallet.
 
 ### Technology stack
 
