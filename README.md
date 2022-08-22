@@ -23,7 +23,6 @@ https://www.youtube.com/watch?v=kVIb7MGJ53k&t=36s
 - [Resources](#resources)
 
 
-
 ## The Project
 
 An open platform where users can mint their own NFTs and list them on a Marketplace or buying NFT from others. It includes:
@@ -75,7 +74,6 @@ Another way to connect to Mumbai Testnet is by using the following link: https:/
 ### Getting test MATIC
 
 You can get up to 2 MATIC/day by pasting your address here: https://mumbaifaucet.com/.
-
 
 
 ## Developers
@@ -158,7 +156,6 @@ An instance of Polyplace will be up and running on your local environment.
 - Auction features.
 - Bulk upload of NFTs as collections.
 - Creator details and more.
-
 
 
 ## Resources
