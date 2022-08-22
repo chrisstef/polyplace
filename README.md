@@ -143,6 +143,13 @@ You can get up to 2 MATIC/day by pasting your address here: https://mumbaifaucet
 - `Infura`
 - `Alchemy`
 
+### Future Ideas
+
+- Clear deploy on Polygon Mainnet. 
+- Auction features.
+- Bulk upload of NFTs as collections.
+- Creator details and more.
+
 
 ## Resources
 
