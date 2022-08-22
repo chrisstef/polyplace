@@ -111,6 +111,8 @@ npx hardhat run scripts/deploy.js --network hardhat
 
 Paste the deployed address in the `constants.js` file.
 
+Remove the argument provided in the JsonRpcProvider which is located in the line 111 of the `NFTContext.js` file.
+
 Finally you just need to run the following command in your terminal to open the User Interface:
 
 ```
