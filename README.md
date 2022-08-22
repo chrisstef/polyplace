@@ -52,7 +52,7 @@ Users can sell their NFT by specifying its price (in MATIC). If someone fulfills
 
 ### Smart Contract Visualization
 
-Below you can view the smart contract functionalities (and it's interactions).
+Below you can view the smart contract functions (and it's interactions).
 
 <p align="center">
 <img src="/assets/NftViz.png" alt="SCV" title="Smart Contract Visualization">
