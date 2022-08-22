@@ -51,14 +51,6 @@ A user can buy NFTs which someone else offered. This will require paying the req
 
 Users can sell their NFT by specifying its price (in MATIC). If someone fulfills this offer, then the NFT and it's ownership is transferred to the new owner. 
 
-### Smart Contract Visualization
-
-Below you can view the smart contract functions (and it's interactions).
-
-<p align="center">
-<img src="/assets/NftViz.png" alt="SCV" title="Smart Contract Visualization">
-</p>
-
 ### Connect to Mumbai Testnet
 
 First of all, it is required to install Metamask wallet as a browser extension: https://metamask.io/
@@ -74,6 +66,14 @@ Another way to connect to Mumbai Testnet is by using the following link: https:/
 ### Getting test MATIC
 
 You can get up to 2 MATIC/day by pasting your address here: https://mumbaifaucet.com/.
+
+### Smart Contract Visualization
+
+Below you can view the smart contract functions (and it's interactions).
+
+<p align="center">
+<img src="/assets/NftViz.png" alt="SCV" title="Smart Contract Visualization">
+</p>
 
 
 ## Developers
