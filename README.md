@@ -128,6 +128,10 @@ Then you should configure Metamask to connect to your local blockchain. To do it
 Another way to connect to Mumbai Testnet is by using the following link: https://chainlist.org/
 You can add the network of your choice by simply connecting your wallet.
 
+### Getting test MATIC
+
+You can get up to 2 MATIC/day by pasting your address here: https://mumbaifaucet.com/.
+
 ### Technology stack
 
 - `Solidity`
