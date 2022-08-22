@@ -141,6 +141,7 @@ You can get up to 2 MATIC/day by pasting your address here: https://mumbaifaucet
 - `Metamask`
 - `IPFS`
 - `Infura`
+- `Alchemy`
 
 
 ## Resources
@@ -152,4 +153,6 @@ You can get up to 2 MATIC/day by pasting your address here: https://mumbaifaucet
 - [next.js](https://nextjs.org/)
 - [IPFS](https://ipfs.io/)
 - [Infura](https://infura.io/)
-- [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+- [Alchemy](https://www.alchemy.com/)
+- [Vercel](https://vercel.com/)
+
