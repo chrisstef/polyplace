@@ -42,7 +42,7 @@ const Footer = () => {
                 <a href="https://github.com/chrisstef/polyplace#the-project" target="_blank" className="font-poppins dark:text-white text-nft-black-1 font-normal text-base cursor-pointer dark:hover:text-nft-gray-1 hover:text-nft-black-1 my-3 transition duration-300" rel="noreferrer">The Project</a>
               </li>
               <li className="mb-3">
-                <a href="https://github.com/chrisstef/polyplace#getting-started" target="_blank" className="font-poppins dark:text-white text-nft-black-1 font-normal text-base cursor-pointer dark:hover:text-nft-gray-1 hover:text-nft-black-1 my-3 transition duration-300" rel="noreferrer">Developers</a>
+                <a href="https://github.com/chrisstef/polyplace/blob/main/README.md#developers" target="_blank" className="font-poppins dark:text-white text-nft-black-1 font-normal text-base cursor-pointer dark:hover:text-nft-gray-1 hover:text-nft-black-1 my-3 transition duration-300" rel="noreferrer">Developers</a>
               </li>
             </ul>
           </div>
