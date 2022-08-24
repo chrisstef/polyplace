@@ -31,7 +31,7 @@ An open platform where users can mint their own NFTs and list them on a Marketpl
 - A smart contract which represents the NFT Marketplace and contains all the logic to make offers, execute offers...
 - A Next.js front-end application as a user interface.
 
-### Project architecture
+### Project details
 
 Users can access the application via web-browser, and must have the Metamask wallet installed. The interface, built with Next.js, relies on the ethers.js library to communicate with the smart contracts through Metamask. This means that the data reflected on the front-end application is fetched from the Polygon blockchain. Each action performed by the user (mint an NFT, sell NFT, buy NFT...) creates a transaction on Polygon, which will requires Metamask confirmation and a small fee, and this transaction will permanently modify the state of the NFTMarketplace smart contracts. On top of it, users NFT Metadata will be uploaded to the IPFS, generating a hash which will be permanently recorded on the blockchain to prove ownership.
 
@@ -66,14 +66,6 @@ Another way to connect to Mumbai Testnet is by using the following link: https:/
 ### Getting test MATIC
 
 You can get up to 2 MATIC/day by pasting your address here: https://mumbaifaucet.com/.
-
-### Smart Contract Visualization
-
-Below you can view the smart contract functions (and it's interactions).
-
-<p align="center">
-<img src="/assets/NftViz.png" alt="SCV" title="Smart Contract Visualization">
-</p>
 
 
 ## Developers
@@ -117,6 +109,14 @@ Then, you will have to compile the smart contracts by running the following comm
 ```
 npx hardhat compile
 ```
+
+### Smart Contract Visualization
+
+Below you can view the smart contract functions (and it's interactions).
+
+<p align="center">
+<img src="/assets/NftViz.png" alt="SCV" title="Smart Contract Visualization">
+</p>
 
 ### Deployment on Local Blockchain
 
