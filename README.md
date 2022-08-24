@@ -138,13 +138,6 @@ npm run dev
 
 An instance of Polyplace will be up and running on your local environment.
 
-### Future Ideas
-
-- Clear deploy on Polygon Mainnet. 
-- Auction features.
-- Bulk upload of NFTs as collections.
-- Creator details and more.
-
 ### Technology stack
 
 - `Solidity`
@@ -156,6 +149,13 @@ An instance of Polyplace will be up and running on your local environment.
 - `IPFS`
 - `Infura`
 - `Alchemy`
+
+### Future Ideas
+
+- Clear deploy on Polygon Mainnet. 
+- Auction features.
+- Bulk upload of NFTs as collections.
+- Creator details and more.
 
 
 ## Resources
