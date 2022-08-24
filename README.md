@@ -96,7 +96,7 @@ Then, you will need to install hardhat globally by running the following command
 npm install -g hardhat
 ```
 
-### Smart Contracts
+### Smart Contract
 
 First, you will have to set up a local network by running the following command:
 
