@@ -128,16 +128,6 @@ const Home = () => {
                       creatorEths={creator.sum}
                     />
                   ))}
-                  {/* {[6, 7, 8, 9, 10].map((i) => (
-                <CreatorCard
-                  key={`creator-${i}`}
-                  rank={i}
-                  creatorImage={images[`creator${i}`]}
-                  creatorName={`0x${makeId(3)}...${makeId(4)}
-                `}
-                  creatorEths={10 - i * 0.5}
-                />
-              ))} */}
                   {!hideButtons && (
                   <>
                     <div onClick={() => handleScroll('left')} className="absolute w-8 h-8 minlg:w-12 minlg:h-12 top-45 cursor-pointer left-0">
@@ -178,20 +168,6 @@ const Home = () => {
               </div>
               <div className="mt-3 w-full flex flex-wrap justify-start md:justify-center">
                 {nfts.map((nft) => <NFTCard key={nft.tokenId} nft={nft} />)}
-                {/* {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
-              <NFTCard
-                Card
-                key={`nft-${i}`}
-                nft={{
-                  i,
-                  name: `Nifty NFT ${i}`,
-                  price: (10 - i * 0.512).toFixed(2),
-                  seller: `0x${makeId(3)}...${makeId(4)}`,
-                  owner: `0x${makeId(3)}...${makeId(4)}`,
-                  description: 'What an NFT!',
-                }}
-              />
-            ))} */}
               </div>
             </div>
           </>
