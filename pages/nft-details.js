@@ -146,7 +146,7 @@ const AssetDetails = () => {
               <Button
                 btnName="Cancel"
                 btnType="outline"
-                classStyles="rounded-lg"
+                classStyles="rounded-xl"
                 handleClick={() => setPaymentModal(false)}
               />
             </div>
