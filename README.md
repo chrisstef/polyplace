@@ -53,7 +53,7 @@ Users can sell their NFT by specifying its price (in MATIC). If someone fulfills
 
 ### Connect to Mumbai Testnet
 
-First of all, it is required to install Metamask wallet as a browser extension: https://metamask.io/
+First of all, it is required to install Metamask wallet browser extension: https://metamask.io/
 
 Then you should configure Metamask to connect to your local blockchain. To do it manually:
 - Open Metamask.
