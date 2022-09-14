@@ -33,7 +33,7 @@ contract NFTMarketplace is ERC721URIStorage {
       bool sold
     );
 
-    constructor() ERC721("Polyplace Inc", "POLY") {
+    constructor() ERC721("Polyplace Inc.", "PLY") {
       owner = payable(msg.sender);
     }
 
