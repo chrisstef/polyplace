@@ -36,7 +36,7 @@ const Footer = () => {
             <h2 className="font-poppins dark:text-white text-nft-black-1 font-semibold text-xl mb-10">Polyplace</h2>
             <ul className="font-poppins text-nft-black-1 dark:text-white">
               <li className="mb-3">
-                <a href="https://mumbai.polygonscan.com/address/0xC9798FF24bEa832c70E66554a35211677D64a627" target="_blank" className="font-poppins dark:text-white text-nft-black-1 font-normal text-base cursor-pointer dark:hover:text-nft-gray-1 hover:text-nft-black-1 my-3 transition duration-300" rel="noreferrer">Smart Contract</a>
+                <a href="https://mumbai.polygonscan.com/address/0xF5f6B924332C350E3Fcd3A50Fc94db822f0B760f" target="_blank" className="font-poppins dark:text-white text-nft-black-1 font-normal text-base cursor-pointer dark:hover:text-nft-gray-1 hover:text-nft-black-1 my-3 transition duration-300" rel="noreferrer">Smart Contract</a>
               </li>
               <li className="mb-3">
                 <a href="https://github.com/chrisstef/polyplace#the-project" target="_blank" className="font-poppins dark:text-white text-nft-black-1 font-normal text-base cursor-pointer dark:hover:text-nft-gray-1 hover:text-nft-black-1 my-3 transition duration-300" rel="noreferrer">The Project</a>

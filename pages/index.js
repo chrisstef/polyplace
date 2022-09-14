@@ -110,7 +110,7 @@ const Home = () => {
         />
 
         {!isLoading && !nfts.length ? (
-          <h1 className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">There are currently no NFTs to display!</h1>
+          <h1 className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">Looks like the Marketplace is empty.</h1>
         ) : isLoading ? <Loader /> : (
           <>
             <div>
