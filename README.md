@@ -10,7 +10,7 @@ The smart contract has been deployed in the following (test) network: Mumbai.
 
 `NFTMarketplace` Smart Contract Address:
 
-https://mumbai.polygonscan.com/address/0xC9798FF24bEa832c70E66554a35211677D64a627
+https://mumbai.polygonscan.com/address/0xF5f6B924332C350E3Fcd3A50Fc94db822f0B760f
 
 Demo video:
 
