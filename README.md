@@ -8,13 +8,6 @@ An open decentralized NFT Marketplace built with Solidity and Next.js, powered b
 
 The smart contract has been deployed at the following (test) network: Mumbai.
 
-`NFTMarketplace` Smart Contract Address:
-
-https://mumbai.polygonscan.com/address/0xF5f6B924332C350E3Fcd3A50Fc94db822f0B760f
-
-Demo video:
-
-https://www.youtube.com/watch?v=kVIb7MGJ53k&t=36s
 
 ## Table of Contents
 
@@ -30,6 +23,14 @@ An open platform where users can mint their own NFTs and list them on a Marketpl
 - A smart contract which represents a collection of NFTs by following the ERC-721 standard.
 - A smart contract which represents the NFT Marketplace and contains all the logic to make offers, execute offers...
 - A Next.js front-end application as a user interface.
+
+`NFTMarketplace` Smart Contract Address:
+
+https://mumbai.polygonscan.com/address/0xF5f6B924332C350E3Fcd3A50Fc94db822f0B760f
+
+### Demo video
+
+https://www.youtube.com/watch?v=kVIb7MGJ53k&t=36s
 
 ### Project details
 
@@ -169,4 +170,3 @@ An instance of Polyplace will be up and running on your local environment.
 - [Infura](https://infura.io/)
 - [Alchemy](https://www.alchemy.com/)
 - [Vercel](https://vercel.com/docs)
-
