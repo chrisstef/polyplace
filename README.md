@@ -6,8 +6,6 @@
 
 An open decentralized NFT Marketplace built with Solidity and Next.js, powered by Polygon Technologies. It basically is an open platform where users can mint and trade their own NFTs.
 
-The smart contract has been deployed at the following (test) network: Mumbai.
-
 
 ## Table of Contents
 
@@ -23,6 +21,8 @@ An open platform where users can mint their own NFTs and list them on a Marketpl
 - A smart contract which represents a collection of NFTs by following the ERC-721 standard.
 - A smart contract which represents the NFT Marketplace and contains all the logic to make offers, execute offers...
 - A Next.js front-end application as a user interface.
+
+The smart contract has been deployed to Polygon-Mumbai Testnet.
 
 `NFTMarketplace` Smart Contract Address:
 
