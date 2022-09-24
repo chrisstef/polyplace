@@ -22,9 +22,7 @@ An open platform where users can mint their own NFTs and list them on a Marketpl
 - A smart contract which represents the NFT Marketplace and contains all the logic to make offers, execute offers...
 - A Next.js front-end application as a user interface.
 
-The smart contract has been deployed to Polygon-Mumbai Testnet.
-
-`NFTMarketplace` Smart Contract Address:
+`NFTMarketplace` Polygon(Mumbai Testnet) smart contract address:
 
 https://mumbai.polygonscan.com/address/0xF5f6B924332C350E3Fcd3A50Fc94db822f0B760f
 
