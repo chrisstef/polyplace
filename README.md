@@ -6,15 +6,6 @@
 
 An open decentralized NFT Marketplace built with Solidity and Next.js, powered by Polygon Technologies. It basically is an open platform where users can mint and trade their own NFTs.
 
-The smart contract has been deployed in the following (test) network: Mumbai.
-
-`NFTMarketplace` Smart Contract Address:
-
-https://mumbai.polygonscan.com/address/0xC9798FF24bEa832c70E66554a35211677D64a627
-
-Demo video:
-
-https://www.youtube.com/watch?v=kVIb7MGJ53k&t=36s
 
 ## Table of Contents
 
@@ -25,15 +16,23 @@ https://www.youtube.com/watch?v=kVIb7MGJ53k&t=36s
 
 ## The Project
 
-An open platform where users can mint their own NFTs and list them on a Marketplace or buying NFT from others. It includes:
+An open platform where users can mint their own NFTs and list them on a Marketplace or buy NFT from others. It includes:
 
 - A smart contract which represents a collection of NFTs by following the ERC-721 standard.
 - A smart contract which represents the NFT Marketplace and contains all the logic to make offers, execute offers...
 - A Next.js front-end application as a user interface.
 
+`NFTMarketplace` Polygon(Mumbai Testnet) smart contract address:
+
+https://mumbai.polygonscan.com/address/0xF5f6B924332C350E3Fcd3A50Fc94db822f0B760f
+
+### Demo video
+
+https://www.youtube.com/watch?v=kVIb7MGJ53k&t=36s
+
 ### Project details
 
-Users can access the application via web-browser, and must have the Metamask wallet installed. The interface, built with Next.js, relies on the ethers.js library to communicate with the smart contracts through Metamask. This means that the data reflected on the front-end application is fetched from the Polygon blockchain. Each action performed by the user (mint an NFT, sell NFT, buy NFT...) creates a transaction on Polygon, which will requires Metamask confirmation and a small fee, and this transaction will permanently modify the state of the NFTMarketplace smart contracts. On top of it, users NFT Metadata will be uploaded to the IPFS, generating a hash which will be permanently recorded on the blockchain to prove ownership.
+Users can access the application via web-browser, and must have the Metamask wallet installed. The interface, built with Next.js, relies on the ethers.js library to communicate with the smart contracts through Metamask. This means that the data reflected on the front-end application is fetched from the Polygon blockchain. Each action performed by the user (mint an NFT, sell NFT, buy NFT...) creates a transaction on Polygon, which will requires Metamask confirmation and a small fee, and this transaction will permanently modify the state of the NFTMarketplace smart contracts. On top of it, user's NFT Metadata will be uploaded to the IPFS, generating a hash which will be permanently recorded on the blockchain to prove ownership.
 
 ### Features
 
@@ -104,7 +103,7 @@ First, you will have to set up a local network by running the following command:
 npx hardhat node
 ```
 
-Then, you will have to compile the smart contracts by running the following command in your terminal:
+Afterwards, compile the smart contracts by running the following command in your terminal:
 
 ```
 npx hardhat compile
@@ -169,4 +168,3 @@ An instance of Polyplace will be up and running on your local environment.
 - [Infura](https://infura.io/)
 - [Alchemy](https://www.alchemy.com/)
 - [Vercel](https://vercel.com/docs)
-
