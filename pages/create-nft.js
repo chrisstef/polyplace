@@ -5,6 +5,8 @@ import { useDropzone } from 'react-dropzone';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 
+import withTransition from '../components/withTransition';
+
 import { NFTContext } from '../context/NFTContext';
 import { Button, Input, Loader } from '../components';
 
@@ -117,4 +119,4 @@ const CreateNFT = () => {
   );
 };
 
-export default CreateNFT;
+export default withTransition(CreateNFT);

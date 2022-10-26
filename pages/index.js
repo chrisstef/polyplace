@@ -2,6 +2,8 @@ import { useState, useEffect, useRef, useContext } from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 
+import withTransition from '../components/withTransition';
+
 import { NFTContext } from '../context/NFTContext';
 import { Banner, CreatorCard, Loader, NFTCard, SearchBar } from '../components';
 
@@ -178,5 +180,5 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default withTransition(Home);
 

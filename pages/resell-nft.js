@@ -1,6 +1,8 @@
 import { useEffect, useState, useContext } from 'react';
 import { useRouter } from 'next/router';
+
 import axios from 'axios';
+import withTransition from '../components/withTransition';
 
 import { NFTContext } from '../context/NFTContext';
 import { Button, Input, Loader } from '../components';
@@ -66,4 +68,4 @@ const ResellNFT = () => {
   );
 };
 
-export default ResellNFT;
+export default withTransition(ResellNFT);

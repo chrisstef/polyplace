@@ -1,5 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 
+import withTransition from '../components/withTransition';
+
 import { NFTContext } from '../context/NFTContext';
 import { Loader, NFTCard } from '../components';
 
@@ -46,4 +48,4 @@ const ListedNFTs = () => {
   );
 };
 
-export default ListedNFTs;
+export default withTransition(ListedNFTs);

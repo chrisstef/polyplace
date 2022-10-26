@@ -2,6 +2,8 @@ import { useState, useEffect, useContext } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 
+import withTransition from '../components/withTransition';
+
 import { NFTContext } from '../context/NFTContext';
 import { shortenAddress } from '../utils/shortenAddress';
 import { Button, Loader, Modal } from '../components';
@@ -197,4 +199,4 @@ const AssetDetails = () => {
   );
 };
 
-export default AssetDetails;
+export default withTransition(AssetDetails);

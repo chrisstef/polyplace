@@ -2,6 +2,8 @@ import { useState, useEffect, useContext } from 'react';
 
 import Image from 'next/image';
 
+import withTransition from '../components/withTransition';
+
 import { NFTContext } from '../context/NFTContext';
 import { Loader, NFTCard, Banner, SearchBar } from '../components';
 import images from '../assets';
@@ -117,4 +119,4 @@ const MyNFTs = () => {
   );
 };
 
-export default MyNFTs;
+export default withTransition(MyNFTs);
