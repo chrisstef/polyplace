@@ -12,6 +12,7 @@
     "@nomiclabs/hardhat-ethers": "2.0.5",
     "@nomiclabs/hardhat-waffle": "2.0.3",
     "@openzeppelin/contracts": "^4.7.3",
+    "@vercel/analytics": "^0.1.1",
     "axios": "0.26.0",
     "ethers": "^5.5.4",
     "framer-motion": "^6.5.1",
