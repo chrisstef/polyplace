@@ -145,7 +145,7 @@ const Navbar = () => {
 
         <div className="md:hidden flex">
           <MenuItems active={active} setActive={setActive} />
-          <div className="ml-4">
+          <div className="ml-3">
             <ButtonGroup setActive={setActive} router={router} setIsOpen={setIsOpen} />
           </div>
         </div>

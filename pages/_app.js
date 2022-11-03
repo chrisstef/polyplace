@@ -2,8 +2,9 @@ import Script from 'next/script';
 import { ThemeProvider } from 'next-themes';
 import Head from 'next/head';
 
-import { NFTProvider } from '../context/NFTContext';
 import { Navbar, Footer } from '../components';
+
+import { NFTProvider } from '../context/NFTContext';
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }) => (
@@ -18,6 +19,7 @@ const MyApp = ({ Component, pageProps }) => (
         <div className="pt-65">
           <Component {...pageProps} />
         </div>
+        <scrollToTop />
         <Footer />
       </div>
 
