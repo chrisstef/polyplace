@@ -19,7 +19,6 @@ const MyApp = ({ Component, pageProps }) => (
         <div className="pt-65">
           <Component {...pageProps} />
         </div>
-        <scrollToTop />
         <Footer />
       </div>
 
