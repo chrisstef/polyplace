@@ -1,3 +1,3 @@
-export const shortenPrice = (price) => (
-  `${price.slice(0, 6)}+`
+export const shortenPrice = () => (
+  'A lot'
 );

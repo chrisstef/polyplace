@@ -1,3 +1,3 @@
 export const shortenName = (name) => (
-  `${name.slice(0, 18)}`
+  `${name.slice(0, 14)}...`
 );

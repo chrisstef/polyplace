@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 
 import withTransition from '../components/withTransition';
+import { shortenName } from '../utils/shortenName';
 
 import { NFTContext } from '../context/NFTContext';
 import { shortenAddress } from '../utils/shortenAddress';
@@ -83,7 +84,7 @@ const AssetDetails = () => {
 
       <div className="flex-1 justify-start sm:px-4 p-12 sm:pb-4">
         <div className="flex flex-row sm:flex-col">
-          <h2 className="font-poppins dark:text-white text-nft-black-1 font-semibold text-2xl minlg:text-3xl">{nft.name}</h2>
+          <h2 className="font-poppins dark:text-white text-nft-black-1 font-semibold text-2xl minlg:text-3xl">{nft.name.length > 14 ? shortenName(nft.name) : nft.name}</h2>
         </div>
 
         <div className="mt-10">
