@@ -122,7 +122,7 @@ Below you can view the smart contract functions (and it's interactions).
 Deploy the contracts on your hardhat local network by running the following command:
 
 ```
-npx hardhat run scripts/deploy.js --network hardhat
+npx hardhat run scripts/deploy.js --network localhost
 ```
 
 Paste the deployed address in the `constants.js` file.
