@@ -1,7 +1,7 @@
 <p align="center">
-<a href="https://polyplace.vercel.app/" target="_blank">
-<img src="/assets/logo02.png" alt="Alt text logo" title="Logo" width="100px" height="100px">
-</a>
+  <a href="https://polyplace.vercel.app/">
+    <img src="/assets/logo02.png" alt="Alt text logo" title="Logo" width="100px" height="100px">
+  </a>
 </p>
 
 # Polyplace
