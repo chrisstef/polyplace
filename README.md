@@ -1,5 +1,7 @@
 <p align="center">
-<img src="/assets/logo02.png" alt="Alt text logo" title="Logo" width="80px" height="80px">
+<a href="https://polyplace.vercel.app/">
+<img src="/assets/logo02.png" alt="Alt text logo" title="Logo" width="100px" height="100px">
+</a>
 </p>
 
 # Polyplace
