@@ -34,7 +34,7 @@ https://www.youtube.com/watch?v=kVIb7MGJ53k&t=36s
 
 ### Project details
 
-Users can access the application via web-browser, and must have the Metamask wallet installed. The interface, built with Next.js, relies on the ethers.js library to communicate with the smart contracts through Metamask. This means that the data reflected on the front-end application is fetched from the Polygon blockchain. Each action performed by the user (mint an NFT, sell NFT, buy NFT...) creates a transaction on Polygon, which will requires Metamask confirmation and a small fee, and this transaction will permanently modify the state of the NFTMarketplace smart contracts. On top of it, user's NFT Metadata will be uploaded to the IPFS, generating a hash which will be permanently recorded on the blockchain to prove ownership.
+Users can access the application via web-browser, and must have the Metamask wallet installed. The interface, built with Next.js, relies on the ethers.js library to communicate with the smart contracts through Metamask. This means that the data reflected on the front-end application is fetched from the Polygon blockchain. Each action performed by the user (mint an NFT, sell NFT, buy NFT...) creates a transaction on Polygon, which will require Metamask confirmation and a small fee, and this transaction will permanently modify the state of the NFTMarketplace smart contracts. On top of it, user's NFT Metadata will be uploaded to the IPFS, generating a hash which will be permanently recorded on the blockchain to prove ownership.
 
 ### Features
 
@@ -50,7 +50,7 @@ A user can buy NFTs which someone else offered. This will require paying the req
 
 #### Sell NFT
 
-Users can sell their NFT by specifying its price (in MATIC). If someone fulfills this offer, then the NFT and it's ownership is transferred to the new owner. 
+Users can sell their NFT by specifying its price (in MATIC). If someone fulfills this offer, then the NFT and its ownership is transferred to the new owner. 
 
 ### Connect to Mumbai Testnet
 
@@ -113,7 +113,7 @@ npx hardhat compile
 
 ### Smart Contract Visualization
 
-Below you can view the smart contract functions (and it's interactions).
+Below you can view the smart contract functions (and its interactions).
 
 <p align="center">
 <img src="/assets/NftViz.png" alt="SCV" title="Smart Contract Visualization">
