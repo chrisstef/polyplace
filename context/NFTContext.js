@@ -7,8 +7,8 @@ import { create as ipfsHttpClient } from 'ipfs-http-client';
 import { MarketAddress, MarketAddressABI } from './constants';
 
 const subdomainName = 'polyplace';
-const projectId = '2DZ5SclLb6YJBoDvir5Rh96PAVt';
-const projectSecret = 'd44b2bde4d2bb227907264225330c102';
+const projectId = process.env.PROJECT_ID;
+const projectSecret = process.env.PROJECT_SECRET;
 
 const authorization = `Basic ${btoa(`${projectId}:${projectSecret}`)}`;
 
