@@ -28,14 +28,6 @@ An open platform where users can mint their own NFTs and list them on a Marketpl
 
 https://mumbai.polygonscan.com/address/0xF5f6B924332C350E3Fcd3A50Fc94db822f0B760f
 
-### Smart Contract Visualization
-
-Below you can view the current's smart contract functions (and its interactions).
-
-<p align="center">
-<img src="/assets/NftViz.png" alt="SCV" title="Smart Contract Visualization">
-</p>
-
 ### Demo video
 
 https://www.youtube.com/watch?v=kVIb7MGJ53k&t=36s
@@ -58,28 +50,30 @@ A user can buy NFTs which someone else offered. This will require paying the req
 
 #### Sell NFT
 
-Users can sell their NFT by specifying its price (in MATIC). If someone fulfills this offer, then the NFT and its ownership is transferred to the new owner. 
+Users can sell their NFT by specifying its price (in MATIC). If someone fulfills this offer, then the NFT and its ownership is transferred to the new owner.
 
-### Connect to Mumbai Testnet
+### Smart Contract Visualization
 
-First, it is required to install Metamask wallet browser extension: https://metamask.io/
+Below you can view the current's smart contract functions (and its interactions).
 
-Then you should configure Metamask to connect to your local blockchain. To do it manually:
-- Open Metamask.
-- Open the Network Configuration panel.
-- Open Custom RPC.
-- Connect to Mumbai Testnet.
-
-Another way to connect to Mumbai Testnet is by using the following link: https://chainlist.org/ and add the network of your choice by simply connecting your wallet.
-
-### Getting test MATIC
-
-You can get up to 2 test MATIC / day by pasting your address here: https://mumbaifaucet.com/.
+<p align="center">
+<img src="/assets/NftViz.png" alt="SCV" title="Smart Contract Visualization">
+</p>
 
 
 ## Developers
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Connect to Mumbai Testnet
+
+First, it is required to install Metamask wallet browser extension: https://metamask.io/
+
+Next, you need to configure Metamask to connect to the desired blockchain by using the following link: https://chainlist.org/ and add the network of your choice (Mumbai Testnet for now), by simply connecting your wallet from a test address.
+
+### Getting test MATIC
+
+You can get up to 2 test MATIC / day by pasting your address here: https://mumbaifaucet.com/.
 
 ### Install
 
