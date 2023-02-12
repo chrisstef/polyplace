@@ -13,6 +13,7 @@ const CreatorCard = ({ rank, creatorImage, creatorName, creatorEths }) => {
 
   return (
     <motion.div
+      initial={{ opacity: 0 }}
       whileInView={{ opacity: [0, 1] }}
       transition={{ duration: 0.5 }}
       className="min-w-190 minlg:min-w-240 dark:bg-nft-black-3 bg-white border dark:border-nft-black-3 border-nft-gray-1 rounded-3xl flex flex-col p-4 m-4 shadow-md"
@@ -22,6 +23,7 @@ const CreatorCard = ({ rank, creatorImage, creatorName, creatorEths }) => {
       </div>
 
       <motion.div
+        initial={{ opacity: 0 }}
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
         className="my-2 flex justify-center"

@@ -6,11 +6,12 @@ import { create as ipfsHttpClient } from 'ipfs-http-client';
 
 import { MarketAddress, MarketAddressABI } from './constants';
 
-const subdomainName = 'polyplace';
-const projectId = process.env.PROJECT_ID;
-const projectSecret = process.env.PROJECT_SECRET;
+const subdomainName = 'polyplace-v1';
 
-const authorization = `Basic ${btoa(`${projectId}:${projectSecret}`)}`;
+const projectId = process.env.NEXT_PUBLIC_IPFS_PROJECT_ID;
+const projectSecret = process.env.NEXT_PUBLIC_API_KEY_SECRET;
+
+const authorization = `Basic ${Buffer.from(`${projectId}:${projectSecret}`).toString('base64')}`;
 
 const endpointBasePath = `https://${subdomainName}.infura-ipfs.io/ipfs/`;
 
