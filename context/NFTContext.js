@@ -6,19 +6,21 @@ import { create as ipfsHttpClient } from 'ipfs-http-client';
 
 import { MarketAddress, MarketAddressABI } from './constants';
 
-const subdomainName = 'polyplace-v1';
+const subdomainName = 'polyplace';
 
 const projectId = process.env.NEXT_PUBLIC_IPFS_PROJECT_ID;
 const projectSecret = process.env.NEXT_PUBLIC_API_KEY_SECRET;
 
-const authorization = `Basic ${Buffer.from(`${projectId}:${projectSecret}`).toString('base64')}`;
+const auth = `Basic ${Buffer.from(`${projectId}:${projectSecret}`).toString('base64')}`;
 
 const endpointBasePath = `https://${subdomainName}.infura-ipfs.io/ipfs/`;
 
 const client = ipfsHttpClient({
-  url: 'https://ipfs.infura.io:5001/api/v0',
+  host: 'ipfs.infura.io',
+  port: 5001,
+  protocol: 'https',
   headers: {
-    authorization,
+    authorization: auth,
   },
 });
 
@@ -59,7 +61,7 @@ export const NFTProvider = ({ children }) => {
     try {
       const added = await client.add({ content: file });
 
-      const url = endpointBasePath + added.path;
+      const url = `${endpointBasePath}/${added.path}`;
 
       console.log(`Upload to IPFS url: ${url}`);
 
