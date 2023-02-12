@@ -16,3 +16,9 @@ main()
     console.error(error);
     process.exit(1);
   });
+
+/*
+CODE EXPLANATION: 
+This script deploys a contract named "NFTMarketplace" using the Hardhat environment. The deployed contract's address is logged in the console. 
+In case of an error during deployment, an error message is logged in the console and the script exits with a status code of 1.
+*/

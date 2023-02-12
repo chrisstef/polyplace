@@ -50,30 +50,32 @@ A user can buy NFTs which someone else offered. This will require paying the req
 
 #### Sell NFT
 
-Users can sell their NFT by specifying its price (in MATIC). If someone fulfills this offer, then the NFT and its ownership is transferred to the new owner. 
+Users can sell their NFT by specifying its price (in MATIC). If someone fulfills this offer, then the NFT and its ownership is transferred to the new owner.
 
-### Connect to Mumbai Testnet
+### Smart Contract Visualization
 
-First of all, it is required to install Metamask wallet browser extension: https://metamask.io/
+Below you can view the current's smart contract functions (and its interactions).
 
-Then you should configure Metamask to connect to your local blockchain. To do it manually:
-- Open Metamask.
-- Open the Network Configuration panel.
-- Open Custom RPC.
-- Connect to Mumbai Testnet.
-
-Another way to connect to Mumbai Testnet is by using the following link: https://chainlist.org/ and add the network of your choice by simply connecting your wallet.
-
-### Getting test MATIC
-
-You can get up to 2 MATIC/day by pasting your address here: https://mumbaifaucet.com/.
+<p align="center">
+<img src="/assets/NftViz.png" alt="SCV" title="Smart Contract Visualization">
+</p>
 
 
 ## Developers
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### The repository
+### Connect to Mumbai Testnet
+
+First, it is required to install Metamask wallet browser extension: https://metamask.io/
+
+Next, you need to configure Metamask to connect to the desired blockchain by using the following link: https://chainlist.org/ and add the network of your choice (Mumbai Testnet for now), by simply connecting your wallet from a test address.
+
+### Getting test MATIC
+
+You can get up to 2 test MATIC / day by pasting your address here: https://mumbaifaucet.com/.
+
+### Install
 
 First, you will need to `clone` or `fork` the repository into your Github account:
 
@@ -81,23 +83,27 @@ First, you will need to `clone` or `fork` the repository into your Github accoun
 git clone https://github.com/chrisstef/polyplace.git
 ```
 
-### Installing
-
-First, you will need to install the dependencies.
-
 Run the following command in your terminal after cloning the main repo:
 
 ```
 npm install
 ```
 
-Then, you will need to install hardhat globally by running the following command into your terminal:
+At this point you will be able to run the frontend with:
 
 ```
-npm install -g hardhat
+npm run dev
 ```
 
-### Smart Contract
+### Smart Contract development
+
+Make sure to go through the official Docs: https://hardhat.org/hardhat-runner/docs/getting-started#overview.
+
+Initialize hardhat by running the following command:
+
+```
+npx hardhat
+```
 
 First, you will have to set up a local network by running the following command:
 
@@ -105,41 +111,34 @@ First, you will have to set up a local network by running the following command:
 npx hardhat node
 ```
 
-Afterwards, compile the smart contracts by running the following command in your terminal:
+After you are happy with your changes in `NFTMarketplace.sol` file, compile the smart contract:
 
 ```
 npx hardhat compile
 ```
 
-### Smart Contract Visualization
-
-Below you can view the smart contract functions (and its interactions).
-
-<p align="center">
-<img src="/assets/NftViz.png" alt="SCV" title="Smart Contract Visualization">
-</p>
-
 ### Deployment on Local Blockchain
 
-Deploy the contracts on your hardhat local network by running the following command:
+Deploy the contracts on your local hardhat network by running the following command:
 
 ```
 npx hardhat run scripts/deploy.js --network localhost
 ```
 
-Paste the deployed address in the `constants.js` file.
+If all goes well, a new smart contract address refering the NFT Marketplace will be generated. Paste this address in the `constants.js` file.
 
-Remove the argument provided in the JsonRpcProvider which is located in the line 111 of the `NFTContext.js` file.
+Next, remove the argument provided in the `JsonRpcProvider` which is located in the __line 111__ of the `NFTContext.js` file.
 
-Finally, run the following command in your terminal to open the User Interface:
+Finally, run the frontend on a new terminal to open the User Interface:
 
 ```
 npm run dev
 ```
 
-An instance of Polyplace will be up and running on your local environment.
+A local instance of Polyplace will be up and running on your local environment.
 
-### Technology stack
+
+### Tech stack
 
 - `Solidity`
 - `Next.js`
