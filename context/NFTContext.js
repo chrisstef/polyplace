@@ -10,6 +10,7 @@ const subdomainName = 'polyplace-v1';
 
 const projectId = process.env.NEXT_PUBLIC_IPFS_PROJECT_ID;
 const projectSecret = process.env.NEXT_PUBLIC_API_KEY_SECRET;
+const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
 const auth = `Basic ${Buffer.from(`${projectId}:${projectSecret}`).toString('base64')}`;
 
@@ -112,7 +113,7 @@ export const NFTProvider = ({ children }) => {
 
   const fetchNFTs = async () => {
     setIsLoadingNFT(false);
-    const provider = new ethers.providers.JsonRpcProvider('https://polygon-mumbai.g.alchemy.com/v2/aT46mujHo45399eX-fWp9mucSwWW6iuA');
+    const provider = new ethers.providers.JsonRpcProvider(`https://polygon-mumbai.g.alchemy.com/v2/${apiKey}`);
     const contract = fetchContract(provider);
     const data = await contract.fetchMarketItems();
 
