@@ -1,14 +1,21 @@
-import { useState, useEffect, useRef, useContext } from 'react';
-import Image from 'next/image';
-import { useTheme } from 'next-themes';
+import { useState, useEffect, useRef, useContext } from "react";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 
-import { NFTContext } from '../context/NFTContext';
+import { NFTContext } from "../context/NFTContext";
 
-import { Banner, CreatorCard, Loader, NFTCard, SearchBar, withTransition } from '../components';
+import {
+  Banner,
+  CreatorCard,
+  Loader,
+  NFTCard,
+  SearchBar,
+  withTransition,
+} from "../components";
 
-import images from '../assets';
-import { getCreators } from '../utils/getTopCreators';
-import { shortenAddress } from '../utils/shortenAddress';
+import images from "../assets";
+import { getCreators } from "../utils/getTopCreators";
+import { shortenAddress } from "../utils/shortenAddress";
 
 const Home = () => {
   const { fetchNFTs } = useContext(NFTContext);
@@ -16,32 +23,31 @@ const Home = () => {
   const [nfts, setNfts] = useState([]);
   const [nftsCopy, setNftsCopy] = useState([]);
   const { theme } = useTheme();
-  const [activeSelect, setActiveSelect] = useState('Recently Added');
+  const [activeSelect, setActiveSelect] = useState("Recently Added");
   const [isLoading, setIsLoading] = useState(true);
 
   const parentRef = useRef(null);
   const scrollRef = useRef(null);
 
   useEffect(() => {
-    fetchNFTs()
-      .then((items) => {
-        setNfts(items);
-        setNftsCopy(items);
-        setIsLoading(false);
-      });
+    fetchNFTs().then((items) => {
+      setNfts(items);
+      setNftsCopy(items);
+      setIsLoading(false);
+    });
   }, []);
 
   useEffect(() => {
     const sortedNfts = [...nfts];
 
     switch (activeSelect) {
-      case 'Price (low to high)':
+      case "Price (low to high)":
         setNfts(sortedNfts.sort((a, b) => a.price - b.price));
         break;
-      case 'Price (high to low)':
+      case "Price (high to low)":
         setNfts(sortedNfts.sort((a, b) => b.price - a.price));
         break;
-      case 'Recently Added':
+      case "Recently Added":
         setNfts(sortedNfts.sort((a, b) => b.tokenId - a.tokenId));
         break;
       default:
@@ -51,7 +57,9 @@ const Home = () => {
   }, [activeSelect]);
 
   const onHandleSearch = (value) => {
-    const filteredNfts = nfts.filter(({ name }) => name.toLowerCase().includes(value.toLowerCase()));
+    const filteredNfts = nfts.filter(({ name }) =>
+      name.toLowerCase().includes(value.toLowerCase())
+    );
 
     if (filteredNfts.length) {
       setNfts(filteredNfts);
@@ -71,7 +79,7 @@ const Home = () => {
 
     const scrollAmount = window.innerWidth > 1800 ? 270 : 210;
 
-    if (direction === 'left') {
+    if (direction === "left") {
       current.scrollLeft -= scrollAmount;
     } else {
       current.scrollLeft += scrollAmount;
@@ -92,10 +100,10 @@ const Home = () => {
   useEffect(() => {
     isScrollable();
 
-    window.addEventListener('resize', isScrollable);
+    window.addEventListener("resize", isScrollable);
 
     return () => {
-      window.removeEventListener('resize', isScrollable);
+      window.removeEventListener("resize", isScrollable);
     };
   });
 
@@ -111,15 +119,25 @@ const Home = () => {
         />
 
         {!isLoading && !nfts.length ? (
-          <h1 className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">The marketplace is empty.</h1>
-        ) : isLoading ? <Loader /> : (
+          <h1 className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">
+            The marketplace is empty.
+          </h1>
+        ) : isLoading ? (
+          <Loader />
+        ) : (
           <>
             <div>
               <h1 className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">
                 ⭐ Top Creators
               </h1>
-              <div className="relative flex-1 max-w-full flex mt-3" ref={parentRef}>
-                <div className="flex flex-row w-max overflow-x-scroll no-scrollbar select-none" ref={scrollRef}>
+              <div
+                className="relative flex-1 max-w-full flex mt-3"
+                ref={parentRef}
+              >
+                <div
+                  className="flex flex-row w-max overflow-x-scroll no-scrollbar select-none"
+                  ref={scrollRef}
+                >
                   {topCreators.map((creator, i) => (
                     <CreatorCard
                       key={creator.seller}
@@ -130,26 +148,32 @@ const Home = () => {
                     />
                   ))}
                   {!hideButtons && (
-                  <>
-                    <div onClick={() => handleScroll('left')} className="absolute w-8 h-8 minlg:w-12 minlg:h-12 top-45 cursor-pointer left-0">
-                      <Image
-                        src={images.left}
-                        layout="fill"
-                        objectFit="contain"
-                        alt="left_arrow"
-                        className={theme === 'light' ? 'filter invert' : ''}
-                      />
-                    </div>
-                    <div onClick={() => handleScroll('right')} className="absolute w-8 h-8 minlg:w-12 minlg:h-12 top-45 cursor-pointer right-0">
-                      <Image
-                        src={images.right}
-                        layout="fill"
-                        objectFit="contain"
-                        alt="right_arrow"
-                        className={theme === 'light' ? 'filter invert' : ''}
-                      />
-                    </div>
-                  </>
+                    <>
+                      <div
+                        onClick={() => handleScroll("left")}
+                        className="absolute w-8 h-8 minlg:w-12 minlg:h-12 top-45 cursor-pointer left-0"
+                      >
+                        <Image
+                          src={images.left}
+                          layout="fill"
+                          objectFit="contain"
+                          alt="left_arrow"
+                          className={theme === "light" ? "filter invert" : ""}
+                        />
+                      </div>
+                      <div
+                        onClick={() => handleScroll("right")}
+                        className="absolute w-8 h-8 minlg:w-12 minlg:h-12 top-45 cursor-pointer right-0"
+                      >
+                        <Image
+                          src={images.right}
+                          layout="fill"
+                          objectFit="contain"
+                          alt="right_arrow"
+                          className={theme === "light" ? "filter invert" : ""}
+                        />
+                      </div>
+                    </>
                   )}
                 </div>
               </div>
@@ -157,7 +181,9 @@ const Home = () => {
 
             <div className="mt-10">
               <div className="flexBetween mx-4 xs:mx-0 minlg:mx-8 sm:flex-col sm:items-start">
-                <h1 className="flex-1 font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold sm:mb-4">🔥 Hot NFTs</h1>
+                <h1 className="flex-1 font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold sm:mb-4">
+                  🔥 Hot NFTs
+                </h1>
                 <div className="flex-2 sm:w-full flex flex-row sm:flex-col">
                   <SearchBar
                     activeSelect={activeSelect}
@@ -168,7 +194,9 @@ const Home = () => {
                 </div>
               </div>
               <div className="mt-3 w-full flex flex-wrap justify-start md:justify-center">
-                {nfts.map((nft) => <NFTCard key={nft.tokenId} nft={nft} />)}
+                {nfts.map((nft) => (
+                  <NFTCard key={nft.tokenId} nft={nft} />
+                ))}
               </div>
             </div>
           </>
@@ -179,4 +207,3 @@ const Home = () => {
 };
 
 export default withTransition(Home);
-
