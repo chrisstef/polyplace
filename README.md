@@ -155,7 +155,7 @@ A local instance of Polyplace will be up and running on your local environment.
 - Clear deploy on Polygon Mainnet. 
 - Auction features.
 - Bulk upload of NFTs as collections.
-- Creator details and more.
+- Creator details page.
 
 
 ## Resources
