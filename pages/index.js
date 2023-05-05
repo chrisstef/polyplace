@@ -25,8 +25,9 @@ const Home = () => {
   useEffect(() => {
     fetchNFTs()
       .then((items) => {
-        setNfts(items);
-        setNftsCopy(items);
+       const finalitems =  items.filter((v) => v !==null )
+        setNfts(finalitems);
+        setNftsCopy(finalitems);
         setIsLoading(false);
       });
   }, []);

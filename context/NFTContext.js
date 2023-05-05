@@ -130,24 +130,34 @@ export const NFTProvider = ({ children }) => {
     const items = await Promise.all(
       data.map(async ({ tokenId, seller, owner, price: unformattedPrice }) => {
         const tokenURI = await contract.tokenURI(tokenId);
-        const {
-          data: { image, name, description },
-        } = await axios.get(tokenURI);
-        const price = ethers.utils.formatUnits(
-          unformattedPrice.toString(),
-          "ether"
-        );
-
-        return {
-          price,
-          tokenId: tokenId.toNumber(),
-          seller,
-          owner,
-          image,
-          name,
-          description,
-          tokenURI,
-        };
+        console.log("data" , tokenURI)
+        try {
+          const { data: { image, name, description } } = await axios.get(tokenURI);
+          const price = ethers.utils.formatUnits(unformattedPrice.toString(), "ether");
+          
+          // return an object with relevant properties
+          return {
+            price,
+            tokenId: tokenId.toNumber(),
+            seller,
+            owner,
+            image,
+            name,
+            description,
+            tokenURI,
+          };
+        } catch (error) {
+          if (error.response && error.response.status === 404) {
+            // handle 404 error here
+            console.log("Token URI not found.");
+            return null;
+          } else {
+            // handle other errors here
+            console.error(error);
+            return null;
+          }
+        }
+        
       })
     );
 
