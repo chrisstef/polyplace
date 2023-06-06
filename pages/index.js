@@ -180,4 +180,3 @@ const Home = () => {
 };
 
 export default withTransition(Home);
-
