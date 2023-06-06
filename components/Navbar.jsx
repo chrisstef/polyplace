@@ -157,8 +157,8 @@ const Navbar = () => {
                         <Image
                             src={images.cross}
                             objectFit="contain"
-                            width={20}
-                            height={20}
+                            width={25}
+                            height={25}
                             alt="close"
                             onClick={() => setIsOpen(false)}
                             className={theme === 'light' ? 'filter invert' : ''}
