@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes';
 
 import { NFTContext } from '../context/NFTContext';
 
-import { Banner, CreatorCard, Loader, NFTCard, SearchBar, withTransition } from '../components';
+import { Banner, CreatorCard, Loader, NFTCard, SearchBar, withTransition, Button } from '../components';
 
 import images from '../assets';
 import { getCreators } from '../utils/getTopCreators';
@@ -18,6 +18,7 @@ const Home = () => {
     const { theme } = useTheme();
     const [activeSelect, setActiveSelect] = useState('Recently Added');
     const [isLoading, setIsLoading] = useState(true);
+    const [showMore, setShowMore] = useState(false);
 
     const parentRef = useRef(null);
     const scrollRef = useRef(null);
@@ -107,7 +108,7 @@ const Home = () => {
             <div className="w-full minmd:w-4/5">
                 <Banner
                     name="Own a piece of the digital revolution with unique NFT collectibles."
-                    childStyles="md:text-4xl sm:text-2xl xs:text-xl text-center"
+                    childStyles="md:text-3xl sm:text-2xl xs:text-xl text-center"
                     parentStyles="justify-start mb-6 h-72 sm:h-60 p-12 xs:p-4 xs:h-44 rounded-3xl"
                 />
 
@@ -168,9 +169,20 @@ const Home = () => {
                                     />
                                 </div>
                             </div>
-                            <div className="mt-3 w-full flex flex-wrap justify-start md:justify-center">
-                                {nfts.map((nft) => <NFTCard key={nft.tokenId} nft={nft} />)}
-                            </div>
+                            {showMore ? (
+                                <div className="mt-3 w-full flex flex-wrap justify-start md:justify-center">
+                                    {nfts.map((nft) => <NFTCard key={nft.tokenId} nft={nft} />)}
+                                </div>
+                            ) : (
+                                <div className="mt-3 w-full flex flex-wrap justify-start md:justify-center">
+                                    {nfts.slice(0, 12).map((nft) => <NFTCard key={nft.tokenId} nft={nft} />)}
+                                </div>
+                            )}
+                            {!showMore && (
+                                <div className="flex justify-center mt-4">
+                                    <Button btnName="Show more" classStyles="mx-2 rounded-xl" handleClick={() => setShowMore(true)}>Show More</Button>
+                                </div>
+                            )}
                         </div>
                     </>
                 )}
