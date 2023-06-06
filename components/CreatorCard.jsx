@@ -1,17 +1,15 @@
 import React, { useContext } from 'react';
-
 import { motion } from 'framer-motion';
-
 import Image from 'next/image';
-
 import images from '../assets';
-
 import { NFTContext } from '../context/NFTContext';
 
 const CreatorCard = ({ rank, creatorImage, creatorName, creatorEths }) => {
     const { nftCurrency } = useContext(NFTContext);
 
-    return (
+    const shouldRender = rank <= 10;
+
+    return shouldRender ? (
         <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: [0, 1] }}
@@ -25,35 +23,42 @@ const CreatorCard = ({ rank, creatorImage, creatorName, creatorEths }) => {
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: [0, 1] }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 1 }}
                 className="my-2 flex justify-center"
             >
                 <div className="relative w-20 h-20 minlg:w-28 minlg:h-28">
-                    {creatorImage && <Image
-                        src={creatorImage}
-                        layout="fill"
-                        objectFit="cover"
-                        alt="creatorName"
-                        className="rounded-full"
-                    />}
-                    <div className="absolute w-4 h-4 minlg:w-7 minlg:h-7 bottom-2 -right-0">
-                        {images.tick && <Image
-                            src={images.tick}
+                    {creatorImage && (
+                        <Image
+                            src={creatorImage}
                             layout="fill"
-                            objectFit="contain"
-                            alt="tick"
-                        />}
-
+                            objectFit="cover"
+                            alt="creatorName"
+                            className="rounded-full"
+                        />
+                    )}
+                    <div className="absolute w-4 h-4 minlg:w-7 minlg:h-7 bottom-2 -right-0">
+                        {images.tick && (
+                            <Image
+                                src={images.tick}
+                                layout="fill"
+                                objectFit="contain"
+                                alt="tick"
+                            />
+                        )}
                     </div>
                 </div>
             </motion.div>
 
             <div className="mt-3 minlg:mt-7 text-center flexCenter flex-col">
-                <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-base">{creatorName}</p>
-                <p className="mt-1 font-poppins dark:text-white text-nft-black-1 font-semibold text-base">{creatorEths.toFixed(2)} <span className="font-normal">{nftCurrency}</span></p>
+                <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-base">
+                    {creatorName}
+                </p>
+                <p className="mt-1 font-poppins dark:text-white text-nft-black-1 font-semibold text-base">
+                    {creatorEths.toFixed(2)} <span className="font-normal">{nftCurrency}</span>
+                </p>
             </div>
         </motion.div>
-    );
+    ) : null;
 };
 
 export default CreatorCard;
