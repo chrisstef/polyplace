@@ -7,7 +7,7 @@ import withTransition from '../components/withTransition';
 import { NFTContext } from '../context/NFTContext';
 import { Loader, NFTCard, Banner, SearchBar } from '../components';
 import images from '../assets';
-import { shortenAddress } from '../utils/shortenAddress';
+import { shortenAddress } from '../utils/index';
 
 const MyNFTs = () => {
     const { fetchMyNFTsOrListedNFTs, currentAccount } = useContext(NFTContext);
