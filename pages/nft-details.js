@@ -3,10 +3,10 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 
 import withTransition from '../components/withTransition';
-import { shortenName } from '../utils/shortenName';
+import { shortenName } from '../utils/index';
 
 import { NFTContext } from '../context/NFTContext';
-import { shortenAddress } from '../utils/shortenAddress';
+import { shortenAddress } from '../utils/index';
 import { Button, Loader, Modal } from '../components';
 import images from '../assets';
 

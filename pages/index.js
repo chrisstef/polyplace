@@ -7,8 +7,8 @@ import { NFTContext } from '../context/NFTContext';
 import { Banner, CreatorCard, Loader, NFTCard, SearchBar, withTransition, Button } from '../components';
 
 import images from '../assets';
-import { getCreators } from '../utils/getTopCreators';
-import { shortenAddress } from '../utils/shortenAddress';
+import { getCreators } from '../utils/index';
+import { shortenAddress } from '../utils/index';
 
 const Home = () => {
     const { fetchNFTs } = useContext(NFTContext);
@@ -207,17 +207,21 @@ const Home = () => {
             </div>
             {
                 showScrollButton && (
-                    <div className='shadow-lg hover:shadow-xl duration-500'>
-                        <button className='fixed bottom-5 right-7 z-50 w-12 h-12 cursor-pointer p-4 nft-gradient shadow-lg rounded-full transform transition duration-500 hover:scale-105 hover:shadow-2xl' onClick={handleScrollToTop}>
-                            <Image
-                                src={images.up}
-                                layout="fill"
-                                objectFit="contain"
-                                alt="top_arrow"
-                                className={theme === 'light' ? 'filter invert' : ''}
-                            />
-                        </button>
-                    </div>
+
+                    <button
+                        type="button"
+                        className='fixed bottom-5 right-7 z-50 w-12 h-12 cursor-pointer p-4 nft-gradient shadow-lg
+                            rounded-full focus:ring-purple-500 inline-flex items-center hover:shadow-2xl
+                            focus:outline-none focus:ring-2 focus:ring-offset-2 transform transition duration-500'
+                        onClick={handleScrollToTop}>
+                        <Image
+                            src={images.up}
+                            layout="fill"
+                            objectFit="contain"
+                            alt="top_arrow"
+                            className={theme === 'light' ? 'filter invert' : ''}
+                        />
+                    </button>
                 )
             }
         </div>

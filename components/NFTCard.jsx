@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { NFTContext } from '../context/NFTContext';
 
 import images from '../assets';
-import { shortenAddress } from '../utils/shortenAddress';
-import { shortenPrice } from '../utils/shortenPrice';
-import { shortenName } from '../utils/shortenName';
+import { shortenAddress } from '../utils/index';
+import { shortenPrice } from '../utils/index';
+import { shortenName } from '../utils/index';
 
 const NFTCard = ({ nft, onProfilePage }) => {
     const { nftCurrency } = useContext(NFTContext);
