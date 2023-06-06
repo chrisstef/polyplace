@@ -19,6 +19,7 @@ const Home = () => {
     const [activeSelect, setActiveSelect] = useState('Recently Added');
     const [isLoading, setIsLoading] = useState(true);
     const [showMore, setShowMore] = useState(false);
+    const [showScrollButton, setShowScrollButton] = useState(false);
 
     const parentRef = useRef(null);
     const scrollRef = useRef(null);
@@ -101,9 +102,26 @@ const Home = () => {
         };
     });
 
+    useEffect(() => {
+        const handleScrollButtonVisibility = () => {
+            window.scrollY > 1000 ? setShowScrollButton(true) : setShowScrollButton(false);
+        };
+
+        window.addEventListener('scroll', handleScrollButtonVisibility);
+
+        return () => {
+            window.removeEventListener('scroll', handleScrollButtonVisibility);
+        };
+    });
+
+    const handleScrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     const topCreators = getCreators(nftsCopy);
 
     return (
+
         <div className="flex justify-center sm:px-4 p-12">
             <div className="w-full minmd:w-4/5">
                 <Banner
@@ -187,7 +205,23 @@ const Home = () => {
                     </>
                 )}
             </div>
+            {
+                showScrollButton && (
+                    <div className='shadow-lg hover:shadow-xl duration-500'>
+                        <button className='fixed bottom-5 right-7 z-50 w-12 h-12 cursor-pointer p-4 nft-gradient shadow-lg rounded-full transform transition duration-500 hover:scale-105 hover:shadow-2xl' onClick={handleScrollToTop}>
+                            <Image
+                                src={images.up}
+                                layout="fill"
+                                objectFit="contain"
+                                alt="top_arrow"
+                                className={theme === 'light' ? 'filter invert' : ''}
+                            />
+                        </button>
+                    </div>
+                )
+            }
         </div>
+
     );
 };
 
