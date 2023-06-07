@@ -1,11 +1,11 @@
 version: '3'
 
 services:
-  polyplace:
+  dapp:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: polyplace
+    container_name: dapp
     restart: always
     volumes:
       - ./:/app

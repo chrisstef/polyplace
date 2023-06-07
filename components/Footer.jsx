@@ -12,10 +12,10 @@ const Footer = () => {
         <footer className="flexCenter flex-col border-t dark:border-nft-black-1 border-nft-gray-1 sm:py-8 py-5">
             <div className="w-full minmd:w-4/5 flex flex-row md:flex-col sm:px-4 px-16">
                 <div className="flexStart flex-1 flex-col">
-                    <div className="flexCenter cursor-pointer">
+                    <div className="flexCenter">
                         <Link href="/">
 
-                            <Image src={images.logo02} objectFit="contain" width={40} height={40} alt="logo" />
+                            <Image src={images.logo02} className='cursor-pointer' objectFit="contain" width={40} height={40} alt="logo" />
                         </Link>
                         <p className=" dark:text-white text-nft-dark font-semibold text-lg ml-1">Polyplace</p>
                     </div>

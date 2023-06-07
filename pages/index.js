@@ -210,17 +210,18 @@ const Home = () => {
 
                     <button
                         type="button"
-                        className='fixed bottom-5 right-7 z-50 w-12 h-12 cursor-pointer p-4 nft-gradient shadow-lg
-                            rounded-full focus:ring-purple-500 inline-flex items-center hover:shadow-2xl
-                            focus:outline-none focus:ring-2 focus:ring-offset-2 transform transition duration-500'
+                        className='fixed bottom-5 right-7 z-50 w-12 h-12 cursor-pointer p-2 nft-gradient shadow-lg
+                                rounded-full focus:ring-purple-500 ring-opacity-0 inline-flex items-center hover:shadow-2xl
+                                focus:outline-none focus:ring-2 focus:ring-offset-2 transform transition duration-500'
                         onClick={handleScrollToTop}>
                         <Image
                             src={images.up}
-                            layout="fill"
-                            objectFit="contain"
+                            width={40}
+                            height={40}
                             alt="top_arrow"
                             className={theme === 'light' ? 'filter invert' : ''}
                         />
+
                     </button>
                 )
             }
