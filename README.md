@@ -75,23 +75,23 @@ Next, you need to configure Metamask to connect to the desired blockchain by usi
 
 You can get up to 2 test MATIC / day by pasting your address here: https://mumbaifaucet.com/.
 
-### Install
+### Install locally
 
 First, you will need to `clone` or `fork` the repository into your Github account:
 
-```
+```shell
 git clone https://github.com/chrisstef/polyplace.git
 ```
 
 Run the following command in your terminal after cloning the main repo:
 
-```
+```shell
 npm install
 ```
 
 At this point you will be able to run the frontend with:
 
-```
+```shell
 npm run dev
 ```
 
@@ -117,6 +117,31 @@ To stop the container, use `Ctrl + C` in your terminal and run the following com
 
 ```sh
 docker-compose down
+```
+
+### Run with Makefile (Optional)
+
+The `Makefile` provides convenient shortcuts for common tasks(docker instructions in our case). It is a way of automating software building procedure and other complex tasks with dependencies. Make sure you have `Makefile` installed and proceed with the following commands:
+
+```shell
+## Cleans, builds and runs the dapp on the DEVELOPMENT environment
+make run-dev
+```
+
+```shell
+## Cleans & recreates everything on the DEVELOPMENT environment
+make recreate-dev
+```
+
+```shell
+## Cleans the dapp from the DEVELOPMENT environment
+make clean-dev: Build the project for production.
+```
+
+To see the list of all the available commands:
+
+```shell
+make help
 ```
 
 That's it! You now have the `Next.js` app running in a Docker container. You can make changes to the app by modifying the files in the pages directory, and the changes will be automatically reflected in the running container.
