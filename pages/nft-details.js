@@ -2,11 +2,12 @@ import { useState, useEffect, useContext } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 
-import withTransition from '../components/withTransition';
-import { shortenName } from '../utils/index';
+import { BiRefresh, BiLinkExternal, BiCopy } from 'react-icons/bi'
+import { MdMoreVert } from 'react-icons/md'
 
+import withTransition from '../components/withTransition';
+import { shortenName, shortenAddress } from '../utils/index';
 import { NFTContext } from '../context/NFTContext';
-import { shortenAddress } from '../utils/index';
 import { Button, Loader, Modal } from '../components';
 import images from '../assets';
 
@@ -20,7 +21,7 @@ const PaymentBodyCmp = ({ nft, nftCurrency }) => (
         <div className="flexBetweenStart my-5">
             <div className="flex-1 flexStartCenter">
                 <div className="relative w-28 h-28">
-                    <Image src={nft.image || images[`nft${nft.i}`]} layout="fill" objectFit="cover" />
+                    <Image src={nft.image || images[`nft${nft.i}`]} className='rounded-xl shadow-lg' layout="fill" objectFit="cover" />
                 </div>
                 <div className="flexCenterStart flex-col ml-5">
                     <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-sm minlg:text-xl">{shortenAddress(nft.seller)}</p>
@@ -47,6 +48,21 @@ const AssetDetails = () => {
     const [successModal, setSuccessModal] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const router = useRouter();
+
+    const actionItems = [
+        {
+            icon: <BiRefresh className='h-6 w-6 text-gray-500 dark:text-gray-400' />
+        },
+        {
+            icon: <BiLinkExternal className='h-6 w-6 text-gray-500 dark:text-gray-400' />
+        },
+        {
+            icon: <BiCopy className='h-6 w-6 text-gray-500 dark:text-gray-400' />
+        },
+        {
+            icon: <MdMoreVert className='h-6 w-6 text-gray-500 dark:text-gray-400' />
+        }
+    ]
 
     useEffect(() => {
         // disable body scroll when navbar is open
@@ -77,18 +93,25 @@ const AssetDetails = () => {
     return (
         <div className="relative flex justify-center md:flex-col min-h-screen">
             <div className="relative flex-1 flexCenter sm:px-4 p-12 border-r md:border-r-0 md:border-b dark:border-nft-black-1 border-nft-gray-1">
-                <div className="relative w-557 minmd:w-2/3 minmd:h-2/3 sm:w-full sm:h-300 h-557 ">
-                    <Image src={nft.image || images[`nft${nft.i}`]} objectFit="cover" className=" rounded-xl shadow-lg" layout="fill" />
+                <div className="relative w-557 minmd:w-2/3 minmd:h-2/3 sm:w-full sm:h-300 h-557">
+                    <Image src={nft.image || images[`nft${nft.i}`]} objectFit="cover" className="rounded-xl shadow-lg" layout="fill" />
                 </div>
             </div>
 
             <div className="flex-1 justify-start sm:px-4 p-12 sm:pb-4">
-                <div className="flex flex-row sm:flex-col">
-                    <h2 className="font-poppins dark:text-white text-nft-black-1 font-semibold text-2xl minlg:text-3xl">{nft.name.length > 14 ? shortenName(nft.name) : nft.name}</h2>
+                <div className="flex flex-row justify-between items-center">
+                    <h2 className="font-poppins dark:text-white text-nft-black-1 font-semibold text-2xl minlg:text-3xl">{nft.name.length > 18 ? shortenName(nft.name) : nft.name}</h2>
+                    <div className='flex divide-x divide-gray-300 rounded-lg border border-gray-300 shadow-sm'>
+                        {actionItems.map((item, index) => (
+                            <button type='button' key={index} className='flex cursor-pointer items-center justify-center p-2 dark:border-nft-black-1 border-nft-gray-1'>
+                                {item.icon}
+                            </button>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="mt-10">
-                    <p className="font-poppins dark:text-white text-nft-black-1 text-xs minlg:text-base font-normal">Owner</p>
+                    <p className="font-poppins dark:text-white text-nft-black-1 text-xs minlg:text-base font-normal">Owned by</p>
                     <div className="flex flex-row items-center mt-3">
                         <div className="relative w-12 h-12 minlg:w-20 minlg:h-20 mr-2">
                             <Image src={images.creator1} objectFit="cover" className="rounded-full" />
