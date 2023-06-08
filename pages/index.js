@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes';
 
 import { NFTContext } from '../context/NFTContext';
 
-import { Banner, CreatorCard, Loader, NFTCard, SearchBar, withTransition, Button } from '../components';
+import { Banner, CreatorCard, Loader, NFTCard, SearchBar, withTransition } from '../components';
 
 import images from '../assets';
 import { getCreators } from '../utils/index';
@@ -198,7 +198,7 @@ const Home = () => {
                             )}
                             {!showMore && (
                                 <div className="flex justify-center mt-4">
-                                    <Button btnName="Show more" classStyles="mx-2 rounded-xl" handleClick={() => setShowMore(true)}>Show More</Button>
+                                    <button btnName="Show more" className="mx-2 rounded-xl border border-nft-red-violet text-sm minlg:text-lg py-2 px-6 minlg:px-8 font-poppins font-semibold text-nft-black-1 dark:text-white transition duration-500 hover:bg-nft-red-violet hover:shadow-md" onClick={() => setShowMore(true)}>Show More</button>
                                 </div>
                             )}
                         </div>
@@ -210,7 +210,7 @@ const Home = () => {
 
                     <button
                         type="button"
-                        className='fixed bottom-5 right-7 z-50 w-12 h-12 cursor-pointer p-2 nft-gradient shadow-lg
+                        className='fixed bottom-12 right-8 z-50 w-12 h-12 cursor-pointer p-2 nft-gradient shadow-lg
                                 rounded-full focus:ring-purple-500 ring-opacity-0 inline-flex items-center hover:shadow-2xl
                                 focus:outline-none focus:ring-2 focus:ring-offset-2 transform transition duration-500'
                         onClick={handleScrollToTop}>
