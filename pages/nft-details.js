@@ -2,13 +2,10 @@ import { useState, useEffect, useContext } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 
-import { BiRefresh, BiLinkExternal, BiCopy } from 'react-icons/bi'
-import { MdMoreVert } from 'react-icons/md'
-
 import withTransition from '../components/withTransition';
 import { shortenName, shortenAddress } from '../utils/index';
 import { NFTContext } from '../context/NFTContext';
-import { Button, Loader, Modal } from '../components';
+import { ActionButtons, Button, Loader, Modal } from '../components';
 import images from '../assets';
 
 const PaymentBodyCmp = ({ nft, nftCurrency }) => (
@@ -49,21 +46,6 @@ const AssetDetails = () => {
     const [isLoading, setIsLoading] = useState(true);
     const router = useRouter();
 
-    const actionItems = [
-        {
-            icon: <BiRefresh className='h-6 w-6 text-gray-500 dark:text-gray-400' />
-        },
-        {
-            icon: <BiLinkExternal className='h-6 w-6 text-gray-500 dark:text-gray-400' />
-        },
-        {
-            icon: <BiCopy className='h-6 w-6 text-gray-500 dark:text-gray-400' />
-        },
-        {
-            icon: <MdMoreVert className='h-6 w-6 text-gray-500 dark:text-gray-400' />
-        }
-    ]
-
     useEffect(() => {
         // disable body scroll when navbar is open
         if (paymentModal || successModal) {
@@ -101,13 +83,7 @@ const AssetDetails = () => {
             <div className="flex-1 justify-start sm:px-4 p-12 sm:pb-4">
                 <div className="flex flex-row justify-between items-center">
                     <h2 className="font-poppins dark:text-white text-nft-black-1 font-semibold text-2xl minlg:text-3xl">{nft.name.length > 18 ? shortenName(nft.name) : nft.name}</h2>
-                    <div className='flex divide-x divide-gray-300 rounded-lg border border-gray-300 shadow-sm'>
-                        {actionItems.map((item, index) => (
-                            <button type='button' key={index} className='flex cursor-pointer items-center justify-center p-2 dark:border-nft-black-1 border-nft-gray-1'>
-                                {item.icon}
-                            </button>
-                        ))}
-                    </div>
+                    <ActionButtons />
                 </div>
 
                 <div className="mt-10">
