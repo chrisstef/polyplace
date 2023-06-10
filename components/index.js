@@ -9,5 +9,6 @@ import Loader from './Loader';
 import Modal from './Modal';
 import SearchBar from './SearchBar';
 import withTransition from './withTransition';
+import ActionButtons from './ActionButtons';
 
-export { Navbar, Footer, Button, Banner, CreatorCard, NFTCard, Input, Loader, Modal, SearchBar, withTransition };
+export { Navbar, Footer, Button, Banner, CreatorCard, NFTCard, Input, Loader, Modal, SearchBar, withTransition, ActionButtons };
