@@ -22,7 +22,6 @@ import creator9 from './creator9.png';
 import creator10 from './creator10.jpg';
 import right from './right.png';
 import left from './left.png';
-import headerbg from './headerbg.png';
 import loader from './loader.gif';
 import arrow from './arrow.png';
 import youtube from './youtube.png';
@@ -53,7 +52,6 @@ export default {
     creator10,
     right,
     left,
-    headerbg,
     loader,
     arrow,
     youtube,

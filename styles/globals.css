@@ -127,10 +127,10 @@
 
 @layer components {
     .action-icon {
-        @apply flex items-center justify-center p-1;
+        @apply flex items-center justify-center p-2;
     }
 
     .action-tooltip {
-        @apply absolute w-auto p-2 m-2 min-w-max top-8 rounded-md shadow-md text-nft-black-1 dark:text-white dark:bg-nft-black-1 bg-white text-xs font-bold font-poppins transition-all duration-200 scale-0 origin-top
+        @apply absolute w-auto p-2 m-2 min-w-max top-10 rounded-md shadow-md font-poppins dark:text-white text-nft-black-1 text-sm minlg:text-lg font-semibold dark:bg-nft-black-1 bg-white scale-0
     }
 }
