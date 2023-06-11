@@ -121,7 +121,7 @@ docker-compose down
 
 ### Run with Makefile (Optional)
 
-The `Makefile` provides convenient shortcuts for common tasks(docker instructions in our case). It is a way of automating software building procedure and other complex tasks with dependencies. Make sure you have `Makefile` installed and proceed with the following commands:
+`Makefile` provides convenient shortcuts for common tasks(docker instructions in our case). It is a way of automating software building procedure and other complex tasks with dependencies. Make sure you have `Makefile` installed and proceed with the following commands:
 
 ```shell
 ## Cleans, builds and runs the dapp on the DEVELOPMENT environment
