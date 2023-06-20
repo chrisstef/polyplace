@@ -135,7 +135,7 @@ make recreate-dev
 
 ```shell
 ## Cleans the dapp from the DEVELOPMENT environment
-make clean-dev: Build the project for production.
+make clean-dev
 ```
 
 To see the list of all the available commands:
